@@ -17,9 +17,9 @@ import {
   StyledOutlinedInput,
   StyledButton,
   StyledSecondBox,
-} from "./Login.styles";
+} from "./SingIn.styles";
 
-export function Login() {
+export function SingIn() {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -31,27 +31,9 @@ export function Login() {
     <Grid container justifyContent={"space-between"} alignItems={"center"}>
       <StyledFirstBox container justifyContent={"center"} alignItems={"center"}>
         <Grid>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
           <Card
             variant="elevation"
-            sx={{ width: 450, height: 500, marginTop: 3 }}
+            sx={{ width: 450, height: 550, marginTop: 3 }}
           >
             <StyledTapeHeaderCard></StyledTapeHeaderCard>
             <Grid sx={{ margin: 3, padding: 2 }}>
@@ -131,7 +113,7 @@ export function Login() {
                   fontWeight={600}
                   fontSize={13}
                   alignSelf={"center"}
-                  letterSpacing={4}
+                  letterSpacing={3}
                 >
                   <a href="">Crie sua conta grátis</a>
                 </Typography>
@@ -145,7 +127,28 @@ export function Login() {
         container
         justifyContent={"center"}
         alignItems={"center"}
+        direction={"column"}
       >
+        <Grid container justifyContent={"center"}>
+          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            LOGO
+          </Typography>
+        </Grid>
         <Typography variant="overline" color={"white"}>
           Alguma coisa vai ficar rolando aqui!
         </Typography>
