@@ -31,22 +31,4 @@ export const StyledTapeHeaderCard = styled(Box)`
   background-color: var(--main-color);
 `;
 
-export const StyledCard = styled(Card)`
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
 
-  ::-webkit-scrollbar-button {
-    color: white;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border: 1px solid black;
-    background-color: var(--main-color);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: var(--bg-color);
-  }
-`;

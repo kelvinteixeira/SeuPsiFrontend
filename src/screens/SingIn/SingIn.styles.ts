@@ -14,12 +14,12 @@ export const StyledOutlinedInput = styled(OutlinedInput)`
 
 export const StyledFirstBox = styled(Grid)`
   height: 100vh;
-  width: 50%;
+  width: 70%;
   background-color: var(--bg-color);
 `;
 export const StyledSecondBox = styled(Grid)`
   height: 100vh;
-  width: 50%;
+  width: 30%;
   background-color: var(--main-color);
 `;
 export const StyledTapeHeaderCard = styled(Box)`

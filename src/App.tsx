@@ -10,9 +10,9 @@ function App() {
     <>
       <Header />
       <Home />
-      <SingIn />
-      <SingUp />
-      {/* <Footer /> */}
+      {/* <SingIn /> */}
+      {/* <SingUp /> */}
+      <Footer />
     </>
   );
 }

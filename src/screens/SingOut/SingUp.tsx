@@ -5,6 +5,7 @@ import {
   Typography,
   InputLabel,
   FormControl,
+  Card,
 } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useState, MouseEvent } from "react";
@@ -16,7 +17,6 @@ import {
   StyledOutlinedInput,
   StyledButton,
   StyledSecondBox,
-  StyledCard,
 } from "./SingUp.styles";
 
 export function SingUp() {
@@ -61,7 +61,7 @@ export function SingUp() {
       </StyledSecondBox>
       <StyledFirstBox container alignItems={"center"} justifyContent={"center"}>
         <Grid>
-          <StyledCard variant="elevation" sx={{ width: 750, height: 550 }}>
+          <Card variant="elevation" sx={{ width: 750, height: 550 }}>
             <StyledTapeHeaderCard></StyledTapeHeaderCard>
             <Grid sx={{ margin: 3, padding: 2 }}>
               <Grid container direction={"column"} justifyContent={"center"}>
@@ -263,7 +263,7 @@ export function SingUp() {
                 </Typography>
               </Grid>
             </Grid>
-          </StyledCard>
+          </Card>
         </Grid>
       </StyledFirstBox>
     </Grid>

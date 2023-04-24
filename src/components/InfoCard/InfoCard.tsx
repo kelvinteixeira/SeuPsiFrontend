@@ -1,20 +1,18 @@
 import {
   Avatar,
   Box,
-  Button,
   Card,
   Grid,
   Rating,
   Typography,
-  IconButton,
   Tooltip,
 } from "@mui/material";
-import styled from "@emotion/styled";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { StyledCardHeader, StyledIconButton, StyledButton } from "./InfoCard.styles";
 
 type CardInfoProps = {
   nome: string;
@@ -65,7 +63,6 @@ export function InfoCard(props: CardInfoProps) {
           <Grid container alignItems={"center"}>
             <Rating name="read-only" value={props.notaAvaliacao} readOnly />
             <Typography
-              color={"var(--main-color)"}
               variant="body2"
               fontWeight={600}
             >
@@ -141,7 +138,7 @@ export function InfoCard(props: CardInfoProps) {
           <Tooltip arrow title="Em desenvolvimento">
             <StyledButton
               sx={{ margin: 1 }}
-              variant="text"
+              variant="contained"
               startIcon={<ChatBubbleOutlineIcon />}
             >
               Manda mensagem!
@@ -153,26 +150,4 @@ export function InfoCard(props: CardInfoProps) {
   );
 }
 
-export const StyledButton = styled(Button)`
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  color: #000000;
-  border: 1px solid #000000;
-  text-transform: none;
-  font-weight: 600;
 
-  :hover {
-    border: 1px solid var(--main-color);
-    background-color: var(--main-color);
-    color: #ffffff;
-  }
-`;
-
-export const StyledIconButton = styled(IconButton)`
-  color: var(--main-color);
-`;
-
-export const StyledCardHeader = styled(Box)`
-  height: 1rem;
-  background-color: var(--main-color);
-`;
