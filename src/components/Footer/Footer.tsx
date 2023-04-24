@@ -7,6 +7,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 
+
 export function Footer() {
   return (
     <StyledBox>
@@ -130,6 +131,7 @@ export function Footer() {
           Nacional de Estabelecimento de Saúde (CNES) sob o protocolo 9763775.
         </Typography>
       </Grid>
+ 
     </StyledBox>
   );
-};
+}

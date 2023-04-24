@@ -71,7 +71,7 @@ export function InfoCard(props: CardInfoProps) {
           </Grid>
           <Typography variant="body1">Principais áreas de atuação</Typography>
           {props.competencias.map((items) => (
-            <Box marginLeft={4}>
+            <Box marginLeft={4} key={items}>
               <ul>
                 <li>
                   <Typography variant="subtitle2">{items}</Typography>

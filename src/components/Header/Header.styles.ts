@@ -1,8 +1,7 @@
-import { Button } from "@mui/material";
+import { IconButton, Button } from "@mui/material";
 import styled from "@emotion/styled";
 
-
-export const StyledButton = styled(Button)`
+export const StyledLinksButton = styled(Button)`
   color: #ffffff;
   border: 1px solid #ffffff;
   text-transform: none;
@@ -13,4 +12,12 @@ export const StyledButton = styled(Button)`
     background-color: #ffffff;
     color: var(--main-color);
   }
+`;
+
+export const StyledBackToTopButton = styled(Button)`
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+  position: fixed;
+  z-index: 1;
 `;
