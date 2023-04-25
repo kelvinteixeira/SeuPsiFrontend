@@ -1,15 +1,20 @@
-export const cardInfo = [
+export const fakeApi = [
   {
     id: 1,
     nome: "Dr. Monkey D. Luffy",
     imagem:
       "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    CRP: 12345678,
+    profissao: "Psicólogo",
+    CRP: "12345678",
     cidade: "Campina Grande",
     estado: "Paraíba",
     notaAvaliacao: 5,
     idiomas: ["Português", "Inglês"],
-    competencias: ["Hipnoterapeuta", "Psicologia infantil", "Terapia do sono"],
+    especialidades: [
+      "Hipnoterapeuta",
+      "Psicologia infantil",
+      "Terapia do sono",
+    ],
     valor: 120,
     resumo:
       "Meu nome é Luffy sou apaixonado por contar histórias engraçadas. Adoro escrever sobre temas como viagens e comédia. Gosto de jogar futebol para manter a mente e o corpo saudáveis. E quero ser o rei dos piratas.",
@@ -24,12 +29,13 @@ export const cardInfo = [
     nome: "Dr. Edward  Newgate",
     imagem:
       "https://epipoca.com.br/wp-content/uploads/2023/02/barba-branca-oden-one-piece.jpg",
-    CRP: 87657123,
+    profissao: "Psicanalista",
+    CRP: "",
     cidade: "São Paulo",
     estado: "São Paulo",
     notaAvaliacao: 4,
     idiomas: ["Inglês", "Japonês"],
-    competencias: [
+    especialidades: [
       "Psicologia Geriátrica",
       "Terapia do casal",
       "Aroma terapeuta",
@@ -48,12 +54,13 @@ export const cardInfo = [
     nome: "Dr. Borsalino Kizaru",
     imagem:
       "https://img1.ak.crunchyroll.com/i/spire4/dc74d400904ae57d6c2f12ad042350441555949693_full.png",
-    CRP: 87657123,
+    profissao: "Terapeuta",
+    CRP: "",
     cidade: "Manaus",
     estado: "Amazonas",
     notaAvaliacao: 3,
     idiomas: ["Alemão", "Inglês"],
-    competencias: ["Psicologia Infantil", "Terapia sexual", "Hipnoterapeuta"],
+    especialidades: ["Psicologia Infantil", "Terapia sexual", "Hipnoterapeuta"],
     valor: 115,
     resumo:
       "Também fotógrafo, adoro registrar momentos únicos e belas paisagens. Além da fotografia, sou um grande amante da natureza e pratico trilhas e acampamentos sempre que possível. Adoro ler livros de filosofia.",
@@ -68,12 +75,13 @@ export const cardInfo = [
     nome: "Dra. Nico Robin",
     imagem:
       "https://ovicio.com.br/wp-content/uploads/2022/01/20220116-ovicio-one-piece-nico-robin-cosplay-1.jpg",
-    CRP: 56767231,
+    profissao: "Coach",
+    CRP: "",
     cidade: "Rio de janeiro",
     estado: "Rio de janeiro",
     notaAvaliacao: 5,
     idiomas: ["Francês", "Japonês", "Português"],
-    competencias: [
+    especialidades: [
       "Psicologia Geriátrica",
       "Terapia do casal",
       "Aroma terapeuta",
@@ -88,4 +96,3 @@ export const cardInfo = [
     },
   },
 ];
-

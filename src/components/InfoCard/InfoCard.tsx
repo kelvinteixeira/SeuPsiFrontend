@@ -20,12 +20,13 @@ import {
 type CardInfoProps = {
   nome: string;
   imagem: string;
-  CRP: number;
+  profissao: string;
+  CRP?: string;
   cidade: string;
   estado: string;
   notaAvaliacao: number;
   idiomas: string[];
-  competencias: string[];
+  especialidades: string[];
   valor: number;
   resumo: string;
   redesSocias: {
@@ -50,16 +51,28 @@ export function InfoCard(props: CardInfoProps) {
           <Typography variant="body1" marginTop={3} fontSize={25}>
             {props.nome}
           </Typography>
-          <Grid container>
-            <Typography variant="body2">CRP: &nbsp; </Typography>
-            <Typography
-              color={"var(--main-color)"}
-              variant="body2"
-              fontWeight={800}
-            >
-              {props.CRP}
-            </Typography>
-          </Grid>
+          {props.CRP ? (
+            <Grid container>
+              <Typography variant="body2" fontWeight={"bold"}>
+                {props.profissao}
+              </Typography>
+              &nbsp; | &nbsp;
+              <Typography variant="body2">CRP: &nbsp; </Typography>
+              <Typography
+                color={"var(--main-color)"}
+                variant="body2"
+                fontWeight={800}
+              >
+                {props.CRP}
+              </Typography>
+            </Grid>
+          ) : (
+            <Grid container>
+              <Typography variant="body2" fontWeight={"bold"}>
+                {props.profissao}
+              </Typography>
+            </Grid>
+          )}
           <Typography variant="body2">
             {props.cidade}, {props.estado}
           </Typography>
@@ -69,8 +82,8 @@ export function InfoCard(props: CardInfoProps) {
               <a href="">(Avaliações)</a>
             </Typography>
           </Grid>
-          <Typography variant="body1">Principais áreas de atuação</Typography>
-          {props.competencias.map((items) => (
+          <Typography variant="body1">Principais especialidades</Typography>
+          {props.especialidades.map((items) => (
             <Box marginLeft={4} key={items}>
               <ul>
                 <li>

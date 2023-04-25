@@ -177,7 +177,7 @@ export function Header() {
                 showLabels
                 sx={{ color: "var(--main-color" }}
                 value={value}
-                onChange={(event, newValue) => {
+                onChange={(_, newValue) => {
                   setValue(newValue);
                 }}
               >
@@ -255,18 +255,18 @@ export function Header() {
         </Container>
       </AppBar>
       {showButton && (
-        <Grid container justifyContent={"center"} alignItems={"center"}>
-          <StyledBackToTopButton
-            onClick={() => scroll.scrollToTop()}
-            size="small"
-            variant="contained"
-          >
-            <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />
-            <Typography fontSize={8} variant="overline">
-              Voltar ao topo
-            </Typography>
-          </StyledBackToTopButton>
-        </Grid>
+          <Grid container justifyContent={"center"} alignItems={"center"}>
+            <StyledBackToTopButton
+              onClick={() => scroll.scrollToTop()}
+              size="small"
+              variant="contained"
+            >
+              <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />
+              <Typography fontSize={8} variant="overline">
+                Voltar ao topo
+              </Typography>
+            </StyledBackToTopButton>
+          </Grid>
       )}
     </>
   );
