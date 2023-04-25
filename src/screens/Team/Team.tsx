@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { InfoCard } from "../../components/InfoCard/InfoCard";
-import { fakeApi } from "../../services/Mock";
+import { fakeCards } from "../../services/Mock";
 import { Searchbar } from "../../components/Searchbar/Searchbar";
 
 export function Team() {
@@ -8,8 +8,8 @@ export function Team() {
     <Grid>
       <Searchbar></Searchbar>
       <Grid container justifyContent="center" alignItems={"center"}>
-        {fakeApi.map((info) => (
-          <InfoCard {...info} key={info.id} />
+        {fakeCards.map((cards) => (
+          <InfoCard {...cards} key={cards.id} />
         ))}
       </Grid>
     </Grid>

@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
-import { Grid, OutlinedInput, Button } from "@mui/material";
+import { Grid, OutlinedInput, Button, Box } from "@mui/material";
 
 export const StyledBox = styled(Grid)`
   height: 15rem;
-  background: #1976d240;
+  /* background-color: #1976d220; */
+  background: var(--bg-color);
 `;
 
 export const StyledSearchbar = styled(OutlinedInput)`
@@ -22,4 +23,14 @@ export const StyledButton = styled(Button)`
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   text-transform: none;
+`;
+
+export const StyledFilterBar = styled(Grid)`
+  height: 6rem;
+  background: white;
+`;
+
+export const StyledCardHeader = styled(Box)`
+  height: 1rem;
+  background-color: var(--main-color);
 `;
