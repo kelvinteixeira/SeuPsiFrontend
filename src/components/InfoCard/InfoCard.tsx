@@ -11,8 +11,11 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import { StyledCardHeader, StyledIconButton, StyledButton } from "./InfoCard.styles";
+import {
+  StyledCardHeader,
+  StyledIconButton,
+  StyledButton,
+} from "./InfoCard.styles";
 
 type CardInfoProps = {
   nome: string;
@@ -62,10 +65,7 @@ export function InfoCard(props: CardInfoProps) {
           </Typography>
           <Grid container alignItems={"center"}>
             <Rating name="read-only" value={props.notaAvaliacao} readOnly />
-            <Typography
-              variant="body2"
-              fontWeight={600}
-            >
+            <Typography variant="body2" fontWeight={600}>
               <a href="">(Avaliações)</a>
             </Typography>
           </Grid>
@@ -105,8 +105,7 @@ export function InfoCard(props: CardInfoProps) {
           </Grid>
 
           <Typography variant="body1" fontSize={20}>
-            <FavoriteIcon />
-            Gostou de mim? Entre em contato! <FavoriteIcon />
+            Gostou de mim? Entre em contato!
           </Typography>
 
           <Grid container alignItems={"center"} justifyContent={"center"}>
@@ -149,5 +148,3 @@ export function InfoCard(props: CardInfoProps) {
     </Card>
   );
 }
-
-

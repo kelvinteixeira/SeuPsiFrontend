@@ -1,4 +1,4 @@
-import { Box, Grid, Tooltip, Typography } from "@mui/material";
+import { Box, Grid, Tooltip, Typography, Link } from "@mui/material";
 import { StyledBox, StyledCardHeader } from "./Footer.styles";
 import { StyledIconButton } from "../InfoCard/InfoCard.styles";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -21,7 +21,7 @@ export function Footer() {
             <Box marginLeft={4} marginBottom={3}>
               <ul>
                 <li>
-                  <Typography variant="body2">O que é o SeuPsi?</Typography>
+                 <Link underline="hover" color={"black"} variant="body2">O que é o SeuPsi?</Link>
                 </li>
                 <li>
                   <Typography variant="body2">

@@ -13,18 +13,26 @@ import {
   MenuItem,
   AppBar,
   Grid,
+  BottomNavigation,
+  BottomNavigationAction,
 } from "@mui/material";
-import { StyledLinksButton, StyledBackToTopButton } from "./Header.styles";
+import { StyledBackToTopButton, StyledCardHeader } from "./Header.styles";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { animateScroll as scroll } from "react-scroll";
-
-const pages = ["Profissionais", "Nossos Planos", "Fale conosco"];
-const settings = ["Perfil", "Planos", "Preferências", "Sair"];
+import GroupIcon from "@mui/icons-material/Group";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import ChatIcon from "@mui/icons-material/Chat";
+import WebIcon from "@mui/icons-material/Web";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
+import SettingsIcon from "@mui/icons-material/Settings";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [showButton, setShowButton] = useState(false);
+  const [value, setValue] = useState(0);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -42,19 +50,20 @@ export function Header() {
   };
 
   useEffect(() => {
-     function handleScroll() {
-       const scrollValue = window.scrollY;
-       setShowButton(scrollValue > 300);
-     }
+    function handleScroll() {
+      const scrollValue = window.scrollY;
+      setShowButton(scrollValue > 300);
+    }
 
-     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-     return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="inherit">
+        <StyledCardHeader></StyledCardHeader>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -67,6 +76,7 @@ export function Header() {
                 mr: 2,
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
+                flexFlow: 1,
                 fontWeight: 700,
                 letterSpacing: ".3rem",
                 color: "inherit",
@@ -105,11 +115,33 @@ export function Header() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <GroupIcon sx={{ color: "var(--main-color)" }} />
+                    <Typography marginLeft={1}>Equipe</Typography>
+                  </Grid>
+                </MenuItem>
+
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <AutoAwesomeMotionIcon
+                      sx={{ color: "var(--main-color)" }}
+                    />
+                    <Typography marginLeft={1}>Planos</Typography>
+                  </Grid>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <GroupIcon sx={{ color: "var(--main-color)" }} />
+                    <Typography marginLeft={1}>Blog</Typography>
+                  </Grid>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <GroupIcon sx={{ color: "var(--main-color)" }} />
+                    <Typography marginLeft={1}>Contato</Typography>
+                  </Grid>
+                </MenuItem>
               </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -134,23 +166,36 @@ export function Header() {
             <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: "none", md: "flex", justifyContent: "center" },
+                display: {
+                  xs: "none",
+                  md: "flex",
+                  justifyContent: "center",
+                },
               }}
             >
-              {pages.map((page) => (
-                <StyledLinksButton
-                  size="small"
-                  variant="text"
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "black", display: "block", mx: 1 }}
-                >
-                  {page}
-                </StyledLinksButton>
-              ))}
+              <BottomNavigation
+                showLabels
+                sx={{ color: "var(--main-color" }}
+                value={value}
+                onChange={(event, newValue) => {
+                  setValue(newValue);
+                }}
+              >
+                <BottomNavigationAction label="Equipe" icon={<GroupIcon />} />
+                <BottomNavigationAction
+                  label="Planos"
+                  icon={<AutoAwesomeMotionIcon />}
+                />
+                <Tooltip title="Em Desenvolvimento">
+                  <BottomNavigationAction label="Blog" icon={<WebIcon />} />
+                </Tooltip>
+                <Tooltip title="Em Desenvolvimento">
+                  <BottomNavigationAction label="Chat" icon={<ChatIcon />} />
+                </Tooltip>
+              </BottomNavigation>
             </Box>
 
-            <Typography fontWeight={800} color={"white"} marginRight={1}>
+            <Typography fontWeight={800} marginRight={1}>
               Bem vindo usuário
             </Typography>
             <Box sx={{ flexGrow: 0 }}>
@@ -178,11 +223,32 @@ export function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
-                  </MenuItem>
-                ))}
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <AccountCircleIcon sx={{ color: "var(--main-color)" }} />
+                    <Typography marginLeft={1}>Perfil</Typography>
+                  </Grid>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <AutoAwesomeMosaicIcon
+                      sx={{ color: "var(--main-color)" }}
+                    />
+                    <Typography marginLeft={1}>Meu plano</Typography>
+                  </Grid>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <SettingsIcon sx={{ color: "var(--main-color)" }} />
+                    <Typography marginLeft={1}>Preferências</Typography>
+                  </Grid>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Grid container>
+                    <LogoutIcon sx={{ color: "var(--main-color)" }} />
+                    <Typography marginLeft={1}>Sair</Typography>
+                  </Grid>
+                </MenuItem>
               </Menu>
             </Box>
           </Toolbar>
