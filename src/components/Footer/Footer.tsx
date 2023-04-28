@@ -1,17 +1,16 @@
 import { Box, Grid, Tooltip, Typography, Link } from "@mui/material";
-import { StyledBox, StyledCardHeader } from "./Footer.styles";
-import { StyledIconButton } from "../InfoCard/InfoCard.styles";
+import { StyledBox } from "./Footer.styles";
+import { StyledIconButton } from "../../screens/Team/components/InfoCard/InfoCard.styles";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 
-
 export function Footer() {
   return (
     <StyledBox>
-      <StyledCardHeader></StyledCardHeader>
+      <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <Grid container justifyContent={"center"} alignItems={"center"}>
         <Grid container margin={2} justifyContent={"space-evenly"}>
           <Grid>
@@ -21,7 +20,9 @@ export function Footer() {
             <Box marginLeft={4} marginBottom={3}>
               <ul>
                 <li>
-                 <Link underline="hover" color={"black"} variant="body2">O que é o SeuPsi?</Link>
+                  <Link underline="hover" color={"black"} variant="body2">
+                    O que é o SeuPsi?
+                  </Link>
                 </li>
                 <li>
                   <Typography variant="body2">
@@ -131,7 +132,6 @@ export function Footer() {
           Nacional de Estabelecimento de Saúde (CNES) sob o protocolo 9763775.
         </Typography>
       </Grid>
- 
     </StyledBox>
   );
 }

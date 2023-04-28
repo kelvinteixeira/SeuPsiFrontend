@@ -16,7 +16,7 @@ import {
   BottomNavigation,
   BottomNavigationAction,
 } from "@mui/material";
-import { StyledBackToTopButton, StyledCardHeader } from "./Header.styles";
+import { StyledBackToTopButton } from "./Header.styles";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import { animateScroll as scroll } from "react-scroll";
 import GroupIcon from "@mui/icons-material/Group";
@@ -63,7 +63,7 @@ export function Header() {
   return (
     <>
       <AppBar position="static" color="inherit">
-        <StyledCardHeader></StyledCardHeader>
+        <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -255,18 +255,18 @@ export function Header() {
         </Container>
       </AppBar>
       {showButton && (
-          <Grid container justifyContent={"center"} alignItems={"center"}>
-            <StyledBackToTopButton
-              onClick={() => scroll.scrollToTop()}
-              size="small"
-              variant="contained"
-            >
-              <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />
-              <Typography fontSize={8} variant="overline">
-                Voltar ao topo
-              </Typography>
-            </StyledBackToTopButton>
-          </Grid>
+        <Grid container justifyContent={"center"} alignItems={"center"}>
+          <StyledBackToTopButton
+            onClick={() => scroll.scrollToTop()}
+            size="small"
+            variant="contained"
+          >
+            <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />
+            <Typography fontSize={8} variant="overline">
+              Voltar ao topo
+            </Typography>
+          </StyledBackToTopButton>
+        </Grid>
       )}
     </>
   );

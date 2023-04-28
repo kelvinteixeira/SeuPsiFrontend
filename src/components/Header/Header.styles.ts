@@ -1,4 +1,4 @@
-import { Box, Button} from "@mui/material";
+import { Button} from "@mui/material";
 import styled from "@emotion/styled";
 
 export const StyledLinksButton = styled(Button)`
@@ -16,7 +16,3 @@ export const StyledBackToTopButton = styled(Button)`
   z-index: 1;
 `;
 
-export const StyledCardHeader = styled(Box)`
-  height: 0.5rem;
-  background-color: var(--main-color);
-`;

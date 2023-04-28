@@ -1,4 +1,4 @@
-import { Box, Button, Grid, OutlinedInput, styled } from "@mui/material";
+import { Button, Grid, OutlinedInput, styled } from "@mui/material";
 
 export const StyledButton = styled(Button)`
   color: #ffffff;
@@ -20,9 +20,5 @@ export const StyledFirstBox = styled(Grid)`
 export const StyledSecondBox = styled(Grid)`
   height: 100vh;
   width: 30%;
-  background-color: var(--main-color);
-`;
-export const StyledTapeHeaderCard = styled(Box)`
-  height: 1rem;
   background-color: var(--main-color);
 `;

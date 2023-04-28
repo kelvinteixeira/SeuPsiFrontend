@@ -6,8 +6,8 @@ export const fakePlans = [
       "muitas coisas boas pra caramba e vai valer a pena viu2!",
       "muitas coisas boas pra caramba e vai valer a pena viu3!",
     ],
-    buttontitle: "Quero ser premium",
-    headertapecolor: "var(--main-color)",
+    buttonTitle: "Quero ser premium",
+    headerTapeColor: "var(--main-color)",
     valor: "99,99",
   },
   {
@@ -18,8 +18,8 @@ export const fakePlans = [
       "muitas coisas excelentes pra dedeu mano3!",
       "muitas coisas excelentes pra dedeu mano4!",
     ],
-    buttontitle: "Quero ser platinum",
-    headertapecolor: "#E0FFFF",
+    buttonTitle: "Quero ser platinum",
+    headerTapeColor: "#E0FFFF",
     valor: "150,00",
   },
   {
@@ -30,8 +30,8 @@ export const fakePlans = [
       "muitas coisas boas so que pra PJ3 e vai valer a pena viu!",
       "muitas coisas boas so que pra PJ4 e vai valer a pena viu!",
     ],
-    buttontitle: "Quero o empresarial",
-    headertapecolor: "#6A5ACD",
+    buttonTitle: "Quero o empresarial",
+    headerTapeColor: "#6A5ACD",
     valor: "Verificar tabela",
   },
 ];

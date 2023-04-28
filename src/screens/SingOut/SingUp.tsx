@@ -6,6 +6,7 @@ import {
   InputLabel,
   FormControl,
   Card,
+  Box,
 } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useState, MouseEvent } from "react";
@@ -13,7 +14,6 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import {
   StyledFirstBox,
-  StyledTapeHeaderCard,
   StyledOutlinedInput,
   StyledButton,
   StyledSecondBox,
@@ -62,7 +62,7 @@ export function SingUp() {
       <StyledFirstBox container alignItems={"center"} justifyContent={"center"}>
         <Grid>
           <Card variant="elevation" sx={{ width: 750, height: 550 }}>
-            <StyledTapeHeaderCard></StyledTapeHeaderCard>
+            <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
             <Grid sx={{ margin: 3, padding: 2 }}>
               <Grid container direction={"column"} justifyContent={"center"}>
                 <Typography
@@ -243,11 +243,7 @@ export function SingUp() {
                 </Grid>
 
                 <Grid container justifyContent={"center"}>
-                  <StyledButton
-                    variant="contained"
-                  >
-                    Criar conta
-                  </StyledButton>
+                  <StyledButton variant="contained">Criar conta</StyledButton>
                 </Grid>
                 <Typography marginBottom={2} alignSelf={"center"}>
                   Já faz parte do SeuPsi?

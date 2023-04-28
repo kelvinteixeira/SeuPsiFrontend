@@ -5,13 +5,13 @@ import {
   Grid,
   Autocomplete,
   TextField,
+  Box,
 } from "@mui/material";
 import {
   StyledBox,
   StyledSearchbar,
   StyledButton,
   StyledFilterBar,
-  StyledCardHeader,
 } from "./Searchbar.styles";
 import {
   fakeProfissoes,
@@ -19,7 +19,7 @@ import {
   fakeValores,
   fakeCidades,
   fakeGeneros,
-} from "../../services/Mock";
+} from "../../../../services/Mock";
 
 export function Searchbar() {
   return (
@@ -50,7 +50,7 @@ export function Searchbar() {
           </Grid>
         </FormControl>
       </StyledBox>
-      <StyledCardHeader></StyledCardHeader>
+      <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <StyledFilterBar
         container
         alignItems={"center"}

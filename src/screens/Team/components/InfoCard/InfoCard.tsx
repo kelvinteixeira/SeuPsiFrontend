@@ -12,7 +12,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import {
-  StyledCardHeader,
   StyledIconButton,
   StyledButton,
 } from "./InfoCard.styles";
@@ -38,8 +37,8 @@ type CardInfoProps = {
 
 export function InfoCard(props: CardInfoProps) {
   return (
-    <Card variant="elevation" sx={{ width: 600, height: 570, margin: 3 }}>
-      <StyledCardHeader></StyledCardHeader>
+    <Card variant="elevation" sx={{ width: 580, height: 570, margin: 2 }}>
+      <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <Grid container alignContent={"center"} justifyContent={"center"}>
         <Avatar
           alt={props.nome}

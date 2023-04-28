@@ -29,8 +29,3 @@ export const StyledFilterBar = styled(Grid)`
   height: 6rem;
   background: white;
 `;
-
-export const StyledCardHeader = styled(Box)`
-  height: 1rem;
-  background-color: var(--main-color);
-`;

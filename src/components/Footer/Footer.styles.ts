@@ -8,8 +8,3 @@ export const StyledBox = styled(Box)`
   height: 13rem;
   background-color: #ffffff;
 `;
-
-export const StyledCardHeader = styled(Box)`
-  height: .5rem;
-  background-color: var(--main-color);
-`;
