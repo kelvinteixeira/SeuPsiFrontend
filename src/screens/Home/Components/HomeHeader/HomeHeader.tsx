@@ -167,10 +167,15 @@ export function HomeHeader() {
             </Box>
 
             <Box>
-              <Button sx={{ marginRight: 3 }} variant="contained">
+              <Button
+                sx={{ marginRight: 3, textTransform: "none" }}
+                variant="contained"
+              >
                 Criar conta
               </Button>
-              <Button variant="outlined">Entrar</Button>
+              <Button sx={{ textTransform: "none" }} variant="outlined">
+                Entrar
+              </Button>
             </Box>
           </Toolbar>
         </Container>

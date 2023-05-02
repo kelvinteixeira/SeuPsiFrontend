@@ -4,17 +4,10 @@ import { SingUp } from "./screens/SingOut/SingUp";
 import { Plans } from "./screens/Plans/Plans";
 import "./Global.styles.css";
 import { Home } from "./screens/Home/Home";
+import { AppRoutes } from "./routes";
 
 function App() {
-  return (
-    <>
-      <Home />
-      {/* <SingIn /> */}
-      {/* <Team /> */}
-      {/* <Plans /> */}
-      {/* <SingUp /> */}
-    </>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

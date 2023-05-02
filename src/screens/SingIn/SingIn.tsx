@@ -33,7 +33,7 @@ export function SingIn() {
         <Grid>
           <Card
             variant="elevation"
-            sx={{ width: 450, height: 550, marginTop: 3 }}
+            sx={{ width: 450, height: 550}}
           >
             <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
             <Grid sx={{ margin: 3, padding: 2 }}>
