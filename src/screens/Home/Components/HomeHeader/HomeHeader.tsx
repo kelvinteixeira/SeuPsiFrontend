@@ -16,11 +16,9 @@ import {
   BottomNavigationAction,
   Button,
 } from "@mui/material";
-import { StyledBackToTopButton } from "./HomeHeader.styles";
-import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
-import { animateScroll as scroll } from "react-scroll";
 import GroupsIcon from "@mui/icons-material/Groups";
 import ApartmentIcon from "@mui/icons-material/Apartment";
+import { BackToTopButton } from "../../../../components/BackToTopButton/BackToTopButton";
 
 export function HomeHeader() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -177,20 +175,7 @@ export function HomeHeader() {
           </Toolbar>
         </Container>
       </AppBar>
-      {showButton && (
-        <Grid container justifyContent={"center"} alignItems={"center"}>
-          <StyledBackToTopButton
-            onClick={() => scroll.scrollToTop()}
-            size="small"
-            variant="contained"
-          >
-            <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />
-            <Typography fontSize={8} variant="overline">
-              Voltar ao topo
-            </Typography>
-          </StyledBackToTopButton>
-        </Grid>
-      )}
+      {showButton && <BackToTopButton />}
     </>
   );
 }

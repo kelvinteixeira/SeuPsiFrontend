@@ -16,9 +16,6 @@ import {
   BottomNavigation,
   BottomNavigationAction,
 } from "@mui/material";
-import { StyledBackToTopButton } from "./Header.styles";
-import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
-import { animateScroll as scroll } from "react-scroll";
 import GroupIcon from "@mui/icons-material/Group";
 import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import ChatIcon from "@mui/icons-material/Chat";
@@ -27,6 +24,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { BackToTopButton } from "../BackToTopButton/BackToTopButton";
 
 export function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -254,20 +252,7 @@ export function Header() {
           </Toolbar>
         </Container>
       </AppBar>
-      {showButton && (
-        <Grid container justifyContent={"center"} alignItems={"center"}>
-          <StyledBackToTopButton
-            onClick={() => scroll.scrollToTop()}
-            size="small"
-            variant="contained"
-          >
-            <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />
-            <Typography fontSize={8} variant="overline">
-              Voltar ao topo
-            </Typography>
-          </StyledBackToTopButton>
-        </Grid>
-      )}
+      {showButton && <BackToTopButton />}
     </>
   );
-}
+};
