@@ -126,7 +126,7 @@ export function Footer() {
             </Box>
           </Grid>
         </Grid>
-        <Typography variant="body2" fontSize={12}>
+        <Typography variant="body2" fontSize={11}>
           SeuPsi Serviços Ltda - CNPJ: 01.234.567/0001-89 | Endereço: R. sem
           nome, 00 - 58000-200 Campina Grande, Paraíba | Possui o Cadastro
           Nacional de Estabelecimento de Saúde (CNES) sob o protocolo 9763775.

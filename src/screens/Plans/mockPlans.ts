@@ -20,7 +20,7 @@ export const fakePlans = [
     ],
     buttonTitle: "Quero ser platinum",
     headerTapeColor: "#E0FFFF",
-    valor: "150,00",
+    valor: "170,00",
   },
   {
     title: "Plano empresarial",
