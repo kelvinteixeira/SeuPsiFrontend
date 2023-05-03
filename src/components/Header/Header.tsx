@@ -25,12 +25,14 @@ import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { BackToTopButton } from "../BackToTopButton/BackToTopButton";
+import { generatePath, useNavigate } from "react-router-dom";
 
 export function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [showButton, setShowButton] = useState(false);
   const [value, setValue] = useState(0);
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -113,14 +115,22 @@ export function Header() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem
+                  onClick={() => {
+                    navigate(generatePath("/equipe"));
+                  }}
+                >
                   <Grid container>
                     <GroupIcon sx={{ color: "var(--main-color)" }} />
                     <Typography marginLeft={1}>Equipe</Typography>
                   </Grid>
                 </MenuItem>
 
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem
+                  onClick={() => {
+                    navigate(generatePath("/planos"));
+                  }}
+                >
                   <Grid container>
                     <AutoAwesomeMotionIcon
                       sx={{ color: "var(--main-color)" }}
@@ -128,13 +138,13 @@ export function Header() {
                     <Typography marginLeft={1}>Planos</Typography>
                   </Grid>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem>
                   <Grid container>
                     <GroupIcon sx={{ color: "var(--main-color)" }} />
                     <Typography marginLeft={1}>Blog</Typography>
                   </Grid>
                 </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem>
                   <Grid container>
                     <GroupIcon sx={{ color: "var(--main-color)" }} />
                     <Typography marginLeft={1}>Contato</Typography>
@@ -175,17 +185,29 @@ export function Header() {
                 showLabels
                 sx={{ color: "var(--main-color" }}
                 value={value}
-                onChange={(_, newValue) => {
-                  setValue(newValue);
-                }}
+                onChange={(_, newValue) => setValue(newValue)}
               >
-                <BottomNavigationAction label="Equipe" icon={<GroupIcon />} />
                 <BottomNavigationAction
+                  onClick={() => navigate("/equipe")}
+                  label="Equipe"
+                  icon={<GroupIcon />}
+                />
+                <BottomNavigationAction
+                  onClick={() => {
+                    navigate("/planos");
+                    setValue(1);
+                  }}
                   label="Planos"
                   icon={<AutoAwesomeMotionIcon />}
                 />
                 <Tooltip title="Em Desenvolvimento">
-                  <BottomNavigationAction label="Blog" icon={<WebIcon />} />
+                  <BottomNavigationAction
+                    onClick={() => {
+                      navigate("/planos");
+                    }}
+                    label="Blog"
+                    icon={<WebIcon />}
+                  />
                 </Tooltip>
                 <Tooltip title="Em Desenvolvimento">
                   <BottomNavigationAction label="Chat" icon={<ChatIcon />} />
@@ -255,4 +277,4 @@ export function Header() {
       {showButton && <BackToTopButton />}
     </>
   );
-};
+}

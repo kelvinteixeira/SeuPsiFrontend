@@ -1,4 +1,4 @@
-import { Button} from "@mui/material";
+import { Button } from "@mui/material";
 import styled from "@emotion/styled";
 
 export const StyledLinksButton = styled(Button)`

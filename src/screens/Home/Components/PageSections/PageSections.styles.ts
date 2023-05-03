@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 
 export const FirstPageSection = styled(Box)`
   height: 100vh;
-  background-color: var(--bg-input);
+  /* background-color: var(--main-color-20); */
+  background-color: var(--main-color-20);
 `;
 export const SecondPageSection = styled(Box)`
   height: 100vh;

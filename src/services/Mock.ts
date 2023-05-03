@@ -42,7 +42,7 @@ export const fakeCards = [
     ],
     valor: 140,
     resumo:
-      "Me chamo Edward e ja fui professor de educação física, ainda adoro incentivar as pessoas a adotarem um estilo de vida saudável. Além do esporte, sou um grande admirador de arte e cultura, frequentando exposições e shows.",
+      "Me chamo Edward e ja fui professor de educação física, ainda adoro incentivar as pessoas a adotarem um estilo de vida saudável. Além do esporte, sou um grande admirador de arte e cultura.",
     redesSocias: {
       instagram: "",
       linkedIn: "",
@@ -136,10 +136,10 @@ export const fakeCidades = [
 
 export const fakeGeneros = [
   "Homem Cis-gênero",
-  "Homem Homossexual",
+  "Homem Homoafetivo",
   "Homem Trânsgenero",
   "Mulher Cis-gênero",
-  "Mulher Homossexual",
+  "Mulher Homeafetivo",
   "Mulher Trânsgenero",
   "Não Binário",
   "Outros",

@@ -8,9 +8,9 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledOutlinedInput = styled(OutlinedInput)`
-  background-color: var(--bg-input);
+  background-color: var(--main-color-20);
   border-radius: 0.4rem;
-  `;
+`;
 
 export const StyledFirstBox = styled(Grid)`
   height: 100vh;

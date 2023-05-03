@@ -9,7 +9,7 @@ export const StyledBox = styled(Grid)`
 
 export const StyledSearchbar = styled(OutlinedInput)`
   width: 35rem;
-  background-color: var(--bg-input);
+  background-color: var(--main-color-20);
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   border-top-right-radius: 0;

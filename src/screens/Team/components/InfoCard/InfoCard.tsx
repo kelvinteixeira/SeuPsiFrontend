@@ -6,15 +6,14 @@ import {
   Rating,
   Typography,
   Tooltip,
+  Button,
 } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-import {
-  StyledIconButton,
-  StyledButton,
-} from "./InfoCard.styles";
+import { StyledIconButton, StyledButton } from "./InfoCard.styles";
+import { Link, useNavigate } from "react-router-dom";
 
 type CardInfoProps = {
   nome: string;
@@ -36,6 +35,8 @@ type CardInfoProps = {
 };
 
 export function InfoCard(props: CardInfoProps) {
+  const navigate = useNavigate();
+
   return (
     <Card variant="elevation" sx={{ width: 580, height: 570, margin: 2 }}>
       <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>

@@ -9,7 +9,7 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledOutlinedInput = styled(OutlinedInput)`
-  background-color: var(--bg-input);
+  background-color: var(--main-color-20);
   border-radius: 0.4rem;
   width: 20rem;
   margin-bottom: 1.5rem;
@@ -26,5 +26,3 @@ export const StyledSecondBox = styled(Grid)`
   width: 30%;
   background-color: var(--main-color);
 `;
-
-

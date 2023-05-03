@@ -19,11 +19,13 @@ import {
 import GroupsIcon from "@mui/icons-material/Groups";
 import ApartmentIcon from "@mui/icons-material/Apartment";
 import { BackToTopButton } from "../../../../components/BackToTopButton/BackToTopButton";
+import { useNavigate } from "react-router-dom";
 
 export function HomeHeader() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [showButton, setShowButton] = useState(false);
   const [value, setValue] = useState(0);
+  const navigate = useNavigate()
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -168,12 +170,17 @@ export function HomeHeader() {
 
             <Box>
               <Button
+                onClick={() => navigate("/cadastrar")}
                 sx={{ marginRight: 3, textTransform: "none" }}
                 variant="contained"
               >
                 Criar conta
               </Button>
-              <Button sx={{ textTransform: "none" }} variant="outlined">
+              <Button
+                onClick={() => navigate("/entrar")}
+                sx={{ textTransform: "none" }}
+                variant="outlined"
+              >
                 Entrar
               </Button>
             </Box>
