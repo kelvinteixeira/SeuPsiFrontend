@@ -1,9 +1,8 @@
 import styled from "@emotion/styled";
-import { Grid, OutlinedInput, Button, Box } from "@mui/material";
+import { Grid, OutlinedInput, Button } from "@mui/material";
 
 export const StyledBox = styled(Grid)`
   height: 15rem;
-  /* background-color: #1976d220; */
   background: var(--bg-color);
 `;
 

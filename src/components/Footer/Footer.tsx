@@ -1,6 +1,11 @@
-import { Box, Grid, Tooltip, Typography, Link } from "@mui/material";
-import { StyledBox } from "./Footer.styles";
-import { StyledIconButton } from "../../screens/Team/components/InfoCard/InfoCard.styles";
+import {
+  Box,
+  Grid,
+  Tooltip,
+  Typography,
+  Link,
+  IconButton,
+} from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,7 +14,13 @@ import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 
 export function Footer() {
   return (
-    <StyledBox>
+    <Box
+      sx={{
+        overflow: "hidden",
+        bottom: 0,
+        height: 200,
+      }}
+    >
       <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <Grid container justifyContent={"center"} alignItems={"center"}>
         <Grid container margin={2} justifyContent={"space-evenly"}>
@@ -33,29 +44,54 @@ export function Footer() {
             </Box>
             <Grid container alignItems={"center"} justifyContent={"center"}>
               <Tooltip arrow title="Nossas postagens instagram!">
-                <StyledIconButton onClick={() => window.open("link")}>
+                <IconButton
+                  sx={{
+                    color: "var(--main-color)",
+                  }}
+                  onClick={() => window.open("link")}
+                >
                   <InstagramIcon />
-                </StyledIconButton>
+                </IconButton>
               </Tooltip>
               <Tooltip arrow title="Nossas postagens profissionais">
-                <StyledIconButton onClick={() => window.open("link")}>
+                <IconButton
+                  sx={{
+                    color: "var(--main-color)",
+                  }}
+                  onClick={() => window.open("link")}
+                >
                   <LinkedInIcon />
-                </StyledIconButton>
+                </IconButton>
               </Tooltip>
               <Tooltip arrow title="Nos mande um email">
-                <StyledIconButton onClick={() => window.open("link")}>
+                <IconButton
+                  sx={{
+                    color: "var(--main-color)",
+                  }}
+                  onClick={() => window.open("link")}
+                >
                   <AttachEmailIcon />
-                </StyledIconButton>
+                </IconButton>
               </Tooltip>
               <Tooltip arrow title="Nossas postagens no twitter">
-                <StyledIconButton onClick={() => window.open("link")}>
+                <IconButton
+                  sx={{
+                    color: "var(--main-color)",
+                  }}
+                  onClick={() => window.open("link")}
+                >
                   <TwitterIcon />
-                </StyledIconButton>
+                </IconButton>
               </Tooltip>
               <Tooltip arrow title="Nossas postagens no facebook">
-                <StyledIconButton onClick={() => window.open("link")}>
+                <IconButton
+                  sx={{
+                    color: "var(--main-color)",
+                  }}
+                  onClick={() => window.open("link")}
+                >
                   <FacebookIcon />
-                </StyledIconButton>
+                </IconButton>
               </Tooltip>
             </Grid>
           </Grid>
@@ -132,6 +168,6 @@ export function Footer() {
           Nacional de Estabelecimento de Saúde (CNES) sob o protocolo 9763775.
         </Typography>
       </Grid>
-    </StyledBox>
+    </Box>
   );
 }

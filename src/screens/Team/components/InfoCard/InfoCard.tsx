@@ -7,36 +7,15 @@ import {
   Typography,
   Tooltip,
   Button,
+  IconButton,
 } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-import { StyledIconButton, StyledButton } from "./InfoCard.styles";
-import { Link, useNavigate } from "react-router-dom";
-
-type CardInfoProps = {
-  nome: string;
-  imagem: string;
-  profissao: string;
-  CRP?: string;
-  cidade: string;
-  estado: string;
-  notaAvaliacao: number;
-  idiomas: string[];
-  especialidades: string[];
-  valor: number;
-  resumo: string;
-  redesSocias: {
-    instagram: string;
-    linkedIn: string;
-    email: string;
-  };
-};
+import { CardInfoProps } from "./InfoCardType";
 
 export function InfoCard(props: CardInfoProps) {
-  const navigate = useNavigate();
-
   return (
     <Card variant="elevation" sx={{ width: 580, height: 570, margin: 2 }}>
       <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
@@ -123,38 +102,52 @@ export function InfoCard(props: CardInfoProps) {
 
           <Grid container alignItems={"center"} justifyContent={"center"}>
             <Tooltip arrow title="Me segue!">
-              <StyledIconButton
+              <IconButton
+                sx={{
+                  color: "var(--main-color)",
+                }}
                 onClick={() => window.open(props.redesSocias.instagram)}
               >
                 <InstagramIcon />
-              </StyledIconButton>
+              </IconButton>
             </Tooltip>
             <Tooltip arrow title="Postagens profissionais">
-              <StyledIconButton
+              <IconButton
+                sx={{
+                  color: "var(--main-color)",
+                }}
                 onClick={() => window.open(props.redesSocias.linkedIn)}
               >
                 <LinkedInIcon />
-              </StyledIconButton>
+              </IconButton>
             </Tooltip>
             <Tooltip arrow title="Ou pelo email">
-              <StyledIconButton
+              <IconButton
+                sx={{
+                  color: "var(--main-color)",
+                }}
                 onClick={() => window.open(props.redesSocias.email)}
               >
                 <AttachEmailIcon />
-              </StyledIconButton>
+              </IconButton>
             </Tooltip>
           </Grid>
 
           <Typography variant="subtitle2">Ou</Typography>
 
           <Tooltip arrow title="Em desenvolvimento">
-            <StyledButton
-              sx={{ margin: 1 }}
+            <Button
+              sx={{
+                margin: 1,
+                marginBottom: 2,
+                borderRadius: 16,
+                textTransform: "none",
+              }}
               variant="contained"
               startIcon={<ChatBubbleOutlineIcon />}
             >
               Manda mensagem!
-            </StyledButton>
+            </Button>
           </Tooltip>
         </Grid>
       </Grid>

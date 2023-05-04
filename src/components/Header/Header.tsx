@@ -21,11 +21,10 @@ import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import ChatIcon from "@mui/icons-material/Chat";
 import WebIcon from "@mui/icons-material/Web";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { BackToTopButton } from "../BackToTopButton/BackToTopButton";
-import { generatePath, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Header() {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -117,7 +116,7 @@ export function Header() {
               >
                 <MenuItem
                   onClick={() => {
-                    navigate(generatePath("/equipe"));
+                    navigate("/equipe");
                   }}
                 >
                   <Grid container>
@@ -128,7 +127,7 @@ export function Header() {
 
                 <MenuItem
                   onClick={() => {
-                    navigate(generatePath("/planos"));
+                    navigate("/planos");
                   }}
                 >
                   <Grid container>
@@ -195,7 +194,6 @@ export function Header() {
                 <BottomNavigationAction
                   onClick={() => {
                     navigate("/planos");
-                    setValue(1);
                   }}
                   label="Planos"
                   icon={<AutoAwesomeMotionIcon />}
@@ -239,18 +237,10 @@ export function Header() {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={() => navigate("/perfil")}>
                   <Grid container>
                     <AccountCircleIcon sx={{ color: "var(--main-color)" }} />
                     <Typography marginLeft={1}>Perfil</Typography>
-                  </Grid>
-                </MenuItem>
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Grid container>
-                    <AutoAwesomeMosaicIcon
-                      sx={{ color: "var(--main-color)" }}
-                    />
-                    <Typography marginLeft={1}>Meu plano</Typography>
                   </Grid>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
