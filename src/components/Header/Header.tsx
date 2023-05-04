@@ -214,10 +214,6 @@ export function Header() {
                 </Tooltip>
               </BottomNavigation>
             </Box>
-
-            <Typography fontWeight={800} marginRight={1}>
-              Bem vindo usuário
-            </Typography>
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Abrir configurações">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

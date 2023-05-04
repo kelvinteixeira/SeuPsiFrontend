@@ -4,6 +4,7 @@ import { Team } from "./screens/Team/Team";
 import { SingIn } from "./screens/SingIn/SingIn";
 import { SingUp } from "./screens/SingOut/SingUp";
 import { Plans } from "./screens/Plans/Plans";
+import { Profile } from "./screens/Profile/Profile";
 
 export function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export function AppRoutes() {
         <Route path="/entrar" element={<SingIn />} />
         <Route path="/cadastrar" element={<SingUp />} />
         <Route path="/planos" element={<Plans />} />
+        <Route path="/perfil" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
