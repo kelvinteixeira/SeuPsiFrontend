@@ -7,6 +7,7 @@ import {
   FormControl,
   Card,
   Box,
+  Link,
 } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useState, MouseEvent } from "react";
@@ -17,9 +18,9 @@ import {
   StyledOutlinedInput,
   StyledButton,
   StyledSecondBox,
-} from "./SingUp.styles";
+} from "./Singup.styles";
 
-export function SingUp() {
+export function Singup() {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -153,25 +154,6 @@ export function SingUp() {
                       />
                     </FormControl>
                   </Grid>
-                  {/* <FormControl variant="outlined">
-                    <InputLabel
-                      sx={{
-                        margin: -1,
-                      }}
-                      htmlFor="email-input"
-                    >
-                      Data de nascimento
-                    </InputLabel>
-                    <StyledOutlinedInput
-                      autoFocus
-                      id="data-nasciment0-input"
-                      label="data-nasciment0"
-                      sx={{ marginBottom: 3 }}
-                      size="small"
-                      placeholder="Digite sua data de nascimento"
-                    />
-                  </FormControl> */}
-
                   <Grid container justifyContent={"space-between"}>
                     <FormControl variant="outlined">
                       <InputLabel
@@ -248,15 +230,9 @@ export function SingUp() {
                 <Typography marginBottom={2} alignSelf={"center"}>
                   Já faz parte do SeuPsi?
                 </Typography>
-                <Typography
-                  variant="overline"
-                  fontWeight={600}
-                  fontSize={13}
-                  alignSelf={"center"}
-                  letterSpacing={3}
-                >
-                  <a href="">Clique aqui para Entrar</a>
-                </Typography>
+                <Link textAlign={"center"} href="/entrar" variant="overline">
+                  Clique aqui para Entrar
+                </Link>
               </Grid>
             </Grid>
           </Card>

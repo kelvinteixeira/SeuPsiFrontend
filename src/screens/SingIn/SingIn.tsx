@@ -7,6 +7,7 @@ import {
   InputLabel,
   FormControl,
   Box,
+  Link,
 } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useState, MouseEvent } from "react";
@@ -31,10 +32,7 @@ export function SingIn() {
     <Grid container justifyContent={"space-between"} alignItems={"center"}>
       <StyledFirstBox container justifyContent={"center"} alignItems={"center"}>
         <Grid>
-          <Card
-            variant="elevation"
-            sx={{ width: 450, height: 550}}
-          >
+          <Card variant="elevation" sx={{ width: 450, height: 550 }}>
             <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
             <Grid sx={{ margin: 3, padding: 2 }}>
               <Grid container direction={"column"} justifyContent={"center"}>
@@ -108,15 +106,10 @@ export function SingIn() {
                 <Typography marginBottom={2} alignSelf={"center"}>
                   Não faz parte do SeuPsi?
                 </Typography>
-                <Typography
-                  variant="overline"
-                  fontWeight={600}
-                  fontSize={13}
-                  alignSelf={"center"}
-                  letterSpacing={3}
-                >
-                  <a href="">Crie sua conta grátis</a>
-                </Typography>
+
+                <Link href="/cadastrar" textAlign={"center"} variant="overline">
+                  Crie sua conta grátis
+                </Link>
               </Grid>
             </Grid>
           </Card>
