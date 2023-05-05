@@ -18,9 +18,9 @@ export function Sidebar() {
       container
       direction={"column"}
       sx={{
-        width: 320,
-        background: "var(--main-color-20)",
-        minHeight: 700
+        width: 300,
+        background: "var(--main-color-40)",
+        minHeight: 550
       }}
     >
       <Grid
@@ -48,7 +48,7 @@ export function Sidebar() {
         <Divider />
         <MenuItem>
           <ArticleIcon sx={{ color: "var(--main-color)", marginRight: 1 }} />
-          <Typography variant="overline">Meu plano</Typography>
+          <Typography variant="overline">Editar plano</Typography>
         </MenuItem>
         <Divider />
         <MenuItem>
