@@ -22,3 +22,7 @@ a {
   text-decoration: none;
   color: var(--main-color);
 }
+
+.link-active {
+  border-right: 1rem solid var(--main-color) !important;
+}

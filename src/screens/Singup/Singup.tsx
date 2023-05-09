@@ -29,7 +29,12 @@ export function Singup() {
     event.preventDefault();
   };
   return (
-    <Grid container justifyContent={"space-between"} alignItems={"center"}>
+    <Grid
+      container
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      sx={{ height: 100 }}
+    >
       <StyledSecondBox
         container
         justifyContent={"center"}
@@ -109,7 +114,6 @@ export function Singup() {
                         Nome social
                       </InputLabel>
                       <StyledOutlinedInput
-                        autoFocus
                         id="nome-social-input"
                         label="nome-social"
                         size="small"
@@ -129,7 +133,6 @@ export function Singup() {
                         Email
                       </InputLabel>
                       <StyledOutlinedInput
-                        autoFocus
                         id="email-input"
                         label="email"
                         size="small"
@@ -146,7 +149,6 @@ export function Singup() {
                         Telefone
                       </InputLabel>
                       <StyledOutlinedInput
-                        autoFocus
                         id="telefone-input"
                         label="telefone"
                         size="small"

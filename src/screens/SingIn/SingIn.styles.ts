@@ -16,7 +16,7 @@ export const StyledFirstBox = styled(Grid)`
   height: 100vh;
   width: 70%;
   background-color: var(--bg-color);
-`;
+  `;
 export const StyledSecondBox = styled(Grid)`
   height: 100vh;
   width: 30%;

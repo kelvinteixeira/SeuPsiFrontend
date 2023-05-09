@@ -139,8 +139,9 @@ export const fakeGeneros = [
   "Homem Homoafetivo",
   "Homem Trânsgenero",
   "Mulher Cis-gênero",
-  "Mulher Homeafetivo",
+  "Mulher Homoafetivo",
   "Mulher Trânsgenero",
   "Não Binário",
   "Outros",
+  "Prefiro não optar"
 ];

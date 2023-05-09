@@ -29,7 +29,7 @@ export function SingIn() {
     event.preventDefault();
   };
   return (
-    <Grid container justifyContent={"space-between"} alignItems={"center"}>
+    <Grid container justifyContent={"space-between"} alignItems={"center"} sx={{height: 100}}>
       <StyledFirstBox container justifyContent={"center"} alignItems={"center"}>
         <Grid>
           <Card variant="elevation" sx={{ width: 450, height: 550 }}>

@@ -11,8 +11,23 @@ import EditIcon from "@mui/icons-material/Edit";
 import ArticleIcon from "@mui/icons-material/Article";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { useState } from "react";
+
+enum ProfileItems {
+  overview = "OVERVIEW",
+  editProfile = "EDITPROFILE",
+  editPLan = "EDITPLAN",
+  myAgenda = "MYAGENDA",
+  settings = "SETTINGS",
+}
 
 export function Sidebar() {
+  const [isActive, setIsActive] = useState("");
+
+  const handleClick = (value: ProfileItems) => {
+    setIsActive(value);
+  };
+
   return (
     <Grid
       container
@@ -20,7 +35,7 @@ export function Sidebar() {
       sx={{
         width: 300,
         background: "var(--main-color-40)",
-        minHeight: 550
+        minHeight: 550,
       }}
     >
       <Grid
@@ -36,27 +51,42 @@ export function Sidebar() {
       </Grid>
       <Divider />
       <MenuList>
-        <MenuItem>
+        <MenuItem
+          onClick={() => handleClick(ProfileItems.overview)}
+          className={isActive == ProfileItems.overview ? "link-active" : ""}
+        >
           <HomeIcon sx={{ color: "var(--main-color)", marginRight: 1 }} />
           <Typography variant="overline">visão geral da conta</Typography>
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <MenuItem
+          onClick={() => handleClick(ProfileItems.editProfile)}
+          className={isActive == ProfileItems.editProfile ? "link-active" : ""}
+        >
           <EditIcon sx={{ color: "var(--main-color)", marginRight: 1 }} />
           <Typography variant="overline">Editar perfil</Typography>
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <MenuItem
+          onClick={() => handleClick(ProfileItems.editPLan)}
+          className={isActive == ProfileItems.editPLan ? "link-active" : ""}
+        >
           <ArticleIcon sx={{ color: "var(--main-color)", marginRight: 1 }} />
           <Typography variant="overline">Editar plano</Typography>
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <MenuItem
+          onClick={() => handleClick(ProfileItems.myAgenda)}
+          className={isActive == ProfileItems.myAgenda ? "link-active" : ""}
+        >
           <DateRangeIcon sx={{ color: "var(--main-color)", marginRight: 1 }} />
           <Typography variant="overline">Minha agenda</Typography>
         </MenuItem>
         <Divider />
-        <MenuItem>
+        <MenuItem
+          onClick={() => handleClick(ProfileItems.settings)}
+          className={isActive == ProfileItems.settings ? "link-active" : ""}
+        >
           <SettingsIcon sx={{ color: "var(--main-color)", marginRight: 1 }} />
           <Typography variant="overline">Preferências</Typography>
         </MenuItem>
