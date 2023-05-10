@@ -171,22 +171,6 @@ export function Singup() {
                         size="small"
                         type={showPassword ? "text" : "password"}
                         label="senha"
-                        endAdornment={
-                          <InputAdornment position="end">
-                            <IconButton
-                              aria-label="toggle password visibility"
-                              onClick={handleClickShowPassword}
-                              onMouseDown={handleMouseDownPassword}
-                              edge="end"
-                            >
-                              {showPassword ? (
-                                <VisibilityOff />
-                              ) : (
-                                <Visibility />
-                              )}
-                            </IconButton>
-                          </InputAdornment>
-                        }
                         placeholder="Digite sua senha"
                       />
                     </FormControl>
@@ -204,32 +188,37 @@ export function Singup() {
                         size="small"
                         type={showPassword ? "text" : "password"}
                         label="confirmar-senha"
-                        endAdornment={
-                          <InputAdornment position="end">
-                            <IconButton
-                              aria-label="toggle password visibility"
-                              onClick={handleClickShowPassword}
-                              onMouseDown={handleMouseDownPassword}
-                              edge="end"
-                            >
-                              {showPassword ? (
-                                <VisibilityOff />
-                              ) : (
-                                <Visibility />
-                              )}
-                            </IconButton>
-                          </InputAdornment>
-                        }
                         placeholder="Digite sua senha novamente"
                       />
                     </FormControl>
+                  </Grid>
+                  <Grid
+                    container
+                    alignItems={"center"}
+                    justifyContent={"end"}
+                    sx={{ color: "gray" }}
+                  >
+                    <Typography variant="subtitle2" fontSize={10}>
+                      {showPassword ? "Ocultar senhas" : "Mostar senhas"}
+                    </Typography>
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      edge="end"
+                    >
+                      {showPassword ? (
+                        <VisibilityOff color="primary" />
+                      ) : (
+                        <Visibility color="primary" />
+                      )}
+                    </IconButton>
                   </Grid>
                 </Grid>
 
                 <Grid container justifyContent={"center"}>
                   <StyledButton variant="contained">Criar conta</StyledButton>
                 </Grid>
-                <Typography marginBottom={2} alignSelf={"center"}>
+                <Typography  alignSelf={"center"}>
                   Já faz parte do SeuPsi?
                 </Typography>
                 <Link textAlign={"center"} href="/entrar" variant="overline">

@@ -30,7 +30,7 @@ export function EditPassword() {
       <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <Box padding={5}>
         <Typography variant="h5" textAlign={"center"} marginBottom={4}>
-          Editar informações da conta
+          Editar informações de segurança
         </Typography>
         <Grid
           container
@@ -118,7 +118,7 @@ export function EditPassword() {
             sx={{ color: "gray" }}
           >
             <Typography variant="subtitle2" fontSize={10}>
-              Mostar senhas
+              {showPassword ? "Ocultar senhas" : "Mostar senhas"}
             </Typography>
             <IconButton
               aria-label="toggle password visibility"
@@ -146,9 +146,7 @@ export function EditPassword() {
         open={openModal}
         onClose={() => setOpenModal(false)}
         title={"Atenção"}
-        subtitle={
-          "Tem certeza que deseja fazer as alteração anteriores?"
-        }
+        subtitle={"Tem certeza que deseja fazer as alteração anteriores?"}
         confirmClick={() => {
           window.alert("Função não implementada");
           setOpenModal(false);

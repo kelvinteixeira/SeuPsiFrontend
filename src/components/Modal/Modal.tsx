@@ -24,6 +24,7 @@ export function Modal(props: ModalProps) {
       keepMounted
       onClose={props.onClose}
       aria-describedby="dialog-confirmation"
+      
     >
       <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <Grid

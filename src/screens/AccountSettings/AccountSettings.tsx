@@ -15,14 +15,14 @@ import { fakeUsers } from "./components/Overview/mockUsers";
 import { EditProfile } from "./components/EditProfile/EditProfile";
 import { EditPlan } from "./components/EditPlan/EditPlan";
 import { MyAgenda } from "./components/MyAgenda/MyAgenda";
-import { Settings } from "./components/Settings/Settings";
+import { Preferences } from "./components/Preferences/Preferences";
 import HomeIcon from "@mui/icons-material/Home";
 import EditIcon from "@mui/icons-material/Edit";
 import ArticleIcon from "@mui/icons-material/Article";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import SettingsIcon from "@mui/icons-material/Settings";
 import KeyIcon from "@mui/icons-material/Key";
-import { EditPassword } from "./components/editPassword/EditPassword";
+import { EditPassword } from "./components/EditPassword/EditPassword";
 
 enum ProfileItems {
   overview = "OVERVIEW",
@@ -53,7 +53,7 @@ export function AccountSettings() {
       case ProfileItems.myAgenda:
         return <MyAgenda />;
       case ProfileItems.settings:
-        return <Settings />;
+        return <Preferences />;
       default:
         return fakeUsers.map((user) => <Overview {...user} key={user.id} />);
     }

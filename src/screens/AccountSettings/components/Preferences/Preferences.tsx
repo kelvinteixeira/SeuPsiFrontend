@@ -1,6 +1,6 @@
 import { Card, Grid, Box } from "@mui/material";
 
-export function Settings() {
+export function Preferences() {
   return (
     <Card
       variant="outlined"

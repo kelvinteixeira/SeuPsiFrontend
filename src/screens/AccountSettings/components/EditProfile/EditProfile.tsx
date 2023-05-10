@@ -153,7 +153,6 @@ export function EditProfile() {
             </Typography>
             <Autocomplete
               clearOnEscape
-              defaultValue={"Indiferente"}
               size="small"
               id="sexo-box"
               options={fakeGeneros}
