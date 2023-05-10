@@ -7,15 +7,16 @@ import {
   InputLabel,
   OutlinedInput,
   IconButton,
-  InputAdornment,
   Button,
 } from "@mui/material";
-import { useState, MouseEvent } from "react";
+import { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { Modal } from "../../../../components/Modal/Modal";
 
 export function EditPassword() {
   const [showPassword, setShowPassword] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   function handleClickShowPassword() {
     setShowPassword(!showPassword);
@@ -131,11 +132,28 @@ export function EditPassword() {
               )}
             </IconButton>
           </Grid>
-          <Button variant="contained" sx={{ textTransform: "none" }}>
+          <Button
+            onClick={() => setOpenModal(true)}
+            variant="contained"
+            sx={{ textTransform: "none" }}
+          >
             Salvar alterações
           </Button>
         </Grid>
       </Box>
+
+      <Modal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        title={"Atenção"}
+        subtitle={
+          "Tem certeza que deseja fazer as alteração anteriores?"
+        }
+        confirmClick={() => {
+          window.alert("Função não implementada");
+          setOpenModal(false);
+        }}
+      />
     </Card>
   );
 }

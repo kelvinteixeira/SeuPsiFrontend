@@ -14,8 +14,12 @@ import FlagIcon from "@mui/icons-material/Flag";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import TagIcon from "@mui/icons-material/Tag";
 import { fakeGeneros } from "../../../../services/Mock";
+import { useState } from "react";
+import { Modal } from "../../../../components/Modal/Modal";
 
 export function EditProfile() {
+   const [openModal, setOpenModal] = useState(false);
+
   return (
     <Card
       variant="outlined"
@@ -185,6 +189,7 @@ export function EditProfile() {
           </Grid>
           <Button
             variant="contained"
+            onClick={() => setOpenModal(true)}
             sx={{
               marginTop: 3,
               textTransform: "none",
@@ -194,6 +199,16 @@ export function EditProfile() {
           </Button>
         </Grid>
       </Box>
+      <Modal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        title={"Atenção"}
+        subtitle={"Tem certeza que deseja fazer as alteração anteriores?"}
+        confirmClick={() => {
+          window.alert("Função não implementada");
+          setOpenModal(false);
+        }}
+      />
     </Card>
   );
 }
