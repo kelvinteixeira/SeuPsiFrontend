@@ -13,10 +13,12 @@ import { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { Modal } from "../../../../components/Modal/Modal";
+import { SnackbarMessage } from "../../../../components/Snackbar/Snackbar";
 
 export function EditPassword() {
   const [showPassword, setShowPassword] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   function handleClickShowPassword() {
     setShowPassword(!showPassword);
@@ -148,9 +150,16 @@ export function EditPassword() {
         title={"Atenção"}
         subtitle={"Tem certeza que deseja fazer as alteração anteriores?"}
         confirmClick={() => {
-          window.alert("Função não implementada");
           setOpenModal(false);
+          setOpenSnackbar(true);
         }}
+      />
+
+      <SnackbarMessage
+        open={openSnackbar}
+        message={"Alterações feitas com sucesso"}
+        onClose={() => setOpenSnackbar(false)}
+        severity={"success"}
       />
     </Card>
   );

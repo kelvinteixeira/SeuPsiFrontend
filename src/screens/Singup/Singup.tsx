@@ -1,7 +1,6 @@
 import {
   Grid,
   IconButton,
-  InputAdornment,
   Typography,
   InputLabel,
   FormControl,
@@ -10,7 +9,7 @@ import {
   Link,
 } from "@mui/material";
 import AdbIcon from "@mui/icons-material/Adb";
-import { useState, MouseEvent } from "react";
+import { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import {
@@ -25,9 +24,6 @@ export function Singup() {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const handleMouseDownPassword = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-  };
   return (
     <Grid
       container
@@ -218,7 +214,7 @@ export function Singup() {
                 <Grid container justifyContent={"center"}>
                   <StyledButton variant="contained">Criar conta</StyledButton>
                 </Grid>
-                <Typography  alignSelf={"center"}>
+                <Typography alignSelf={"center"}>
                   Já faz parte do SeuPsi?
                 </Typography>
                 <Link textAlign={"center"} href="/entrar" variant="overline">

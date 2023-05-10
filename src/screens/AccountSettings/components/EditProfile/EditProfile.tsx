@@ -16,9 +16,11 @@ import TagIcon from "@mui/icons-material/Tag";
 import { fakeGeneros } from "../../../../services/Mock";
 import { useState } from "react";
 import { Modal } from "../../../../components/Modal/Modal";
+import { SnackbarMessage } from "../../../../components/Snackbar/Snackbar";
 
 export function EditProfile() {
-   const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   return (
     <Card
@@ -204,9 +206,16 @@ export function EditProfile() {
         title={"Atenção"}
         subtitle={"Tem certeza que deseja fazer as alteração anteriores?"}
         confirmClick={() => {
-          window.alert("Função não implementada");
           setOpenModal(false);
+          setOpenSnackbar(true)
         }}
+      />
+
+      <SnackbarMessage
+        open={openSnackbar}
+        message={"Alterações feitas com sucesso"}
+        onClose={() => setOpenSnackbar(false)}
+        severity={"success"}
       />
     </Card>
   );
