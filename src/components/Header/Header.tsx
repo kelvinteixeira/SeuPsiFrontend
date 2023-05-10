@@ -234,7 +234,7 @@ export function Header() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem onClick={() => navigate("/perfil")}>
+              <MenuItem onClick={() => navigate("/conta")}>
                 <Grid container>
                   <AccountCircleIcon sx={{ color: "var(--main-color)" }} />
                   <Typography marginLeft={1}>Perfil</Typography>

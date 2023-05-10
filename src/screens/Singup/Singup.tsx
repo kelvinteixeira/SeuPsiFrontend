@@ -195,12 +195,12 @@ export function Singup() {
                         sx={{
                           margin: -1,
                         }}
-                        htmlFor="password-input"
+                        htmlFor="password-confirm-input"
                       >
                         Confirmar senha
                       </InputLabel>
                       <StyledOutlinedInput
-                        id="confirmar-senha-input"
+                        id="password-confirm-input"
                         size="small"
                         type={showPassword ? "text" : "password"}
                         label="confirmar-senha"

@@ -187,7 +187,6 @@ export function EditProfile() {
             variant="contained"
             sx={{
               marginTop: 3,
-              width: 300,
               textTransform: "none",
             }}
           >
