@@ -1,0 +1,143 @@
+{
+  "professionals": [
+    {
+      "id": 1,
+      "name": "Dr. Monkey D. Luffy",
+      "profilePicture": "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
+      "profession": "Psicólogo",
+      "CRP": "12345678",
+      "city": "Campina Grande",
+      "state": "Paraíba",
+      "avaliation": 5,
+      "languages": [
+        "Português",
+        "Inglês"
+      ],
+      "skills": [
+        "Hipnoterapeuta",
+        "Psicologia infantil",
+        "Terapia do sono"
+      ],
+      "price": 120,
+      "description": "Meu name é Luffy sou apaixonado por contar histórias engraçadas. Adoro escrever sobre temas como viagens e comédia. Gosto de jogar futebol para manter a mente e o corpo saudáveis. E quero ser o rei dos piratas.",
+      "socialMedias": {
+        "instagram": "",
+        "linkedIn": "",
+        "email": ""
+      }
+    },
+    {
+      "id": 2,
+      "name": "Dr. Edward  Newgate",
+      "profilePicture": "https://epipoca.com.br/wp-content/uploads/2023/02/barba-branca-oden-one-piece.jpg",
+      "profession": "Psicanalista",
+      "CRP": "",
+      "city": "São Paulo",
+      "state": "São Paulo",
+      "avaliation": 4,
+      "languages": [
+        "Inglês",
+        "Japonês"
+      ],
+      "skills": [
+        "Psicologia Geriátrica",
+        "Terapia do casal",
+        "Aroma terapeuta"
+      ],
+      "price": 140,
+      "description": "Me chamo Edward e ja fui professor de educação física, ainda adoro incentivar as pessoas a adotarem um estilo de vida saudável. Além do esporte, sou um grande admirador de arte e cultura.",
+      "socialMedias": {
+        "instagram": "",
+        "linkedIn": "",
+        "email": ""
+      }
+    },
+    {
+      "id": 3,
+      "name": "Dr. Borsalino Kizaru",
+      "profilePicture": "https://img1.ak.crunchyroll.com/i/spire4/dc74d400904ae57d6c2f12ad042350441555949693_full.png",
+      "profession": "Terapeuta",
+      "CRP": "",
+      "city": "Manaus",
+      "state": "Amazonas",
+      "avaliation": 3,
+      "languages": [
+        "Alemão",
+        "Inglês"
+      ],
+      "skills": [
+        "Psicologia Infantil",
+        "Terapia sexual",
+        "Hipnoterapeuta"
+      ],
+      "price": 115,
+      "description": "Também fotógrafo, adoro registrar momentos únicos e belas paisagens. Além da fotografia, sou um grande amante da natureza e pratico trilhas e acampamentos sempre que possível. Adoro ler livros de filosofia.",
+      "socialMedias": {
+        "instagram": "",
+        "linkedIn": "",
+        "email": ""
+      }
+    },
+    {
+      "id": 4,
+      "name": "Dra. Nico Robin",
+      "profilePicture": "https://ovicio.com.br/wp-content/uploads/2022/01/20220116-ovicio-one-piece-nico-robin-cosplay-1.jpg",
+      "profession": "Coach",
+      "CRP": "",
+      "city": "Rio de janeiro",
+      "state": "Rio de janeiro",
+      "avaliation": 5,
+      "languages": [
+        "Francês",
+        "Japonês",
+        "Português"
+      ],
+      "skills": [
+        "Psicologia Geriátrica",
+        "Terapia do casal",
+        "Aroma terapeuta"
+      ],
+      "price": 165,
+      "description": "Sou uma jovem musicista que adora rock e toca guitarra em uma banda local. Sou bastante extrovertida, engraçada e adoro fazer novas amizades. Além disso, sou apaixonado por literatura e estou sempre lendo algo novo. ",
+      "socialMedias": {
+        "instagram": "https://www.instagram.com/kelvinteixeira_/",
+        "linkedIn": "",
+        "email": ""
+      }
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "userName": "Kelvin",
+      "socialName": "Mangix",
+      "proilePicture": "https://i0.wp.com/viciados.net/wp-content/uploads/2022/11/Naruto-Shippuden-Boruto-2023.webp?resize=1000%2C600&ssl=1",
+      "gender": "Masculino",
+      "CPF": "12345678910",
+      "email": "kelvin@email.com",
+      "birthdayDate": "28101993",
+      "city":"Campina Grande",
+      "state": "Paraíba",
+      "country": "Brasil",
+      "plan": "Premium",
+      "password": "123456",
+      "schedules": [
+        {
+          "id": 1,
+          "date": "2023-06-19T18:53:10.000Z",
+          "professional":"Dr. Monkey D. Luffy"
+        },
+        {
+          "id": 2,
+          "date": "2023-05-29T18:53:10.000Z",
+          "professional":"Dr. Monkey D. Luffy"
+        },
+        {
+          "id": 3,
+          "date": "2023-01-05T18:53:10.000Z",
+          "professional":"Dr. Monkey D. Luffy"
+        }
+      ]
+    }
+  ]
+}

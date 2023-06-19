@@ -194,6 +194,7 @@ export function EditProfile() {
             sx={{
               marginTop: 3,
               textTransform: "none",
+              backgroundColor: "var(--main-color)"
             }}
           >
             Salvar alterações

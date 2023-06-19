@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Grid,
   Avatar,
@@ -11,7 +11,6 @@ import {
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Overview } from "./components/Overview/Overview";
-import { fakeUsers } from "./components/Overview/mockUsers";
 import { EditProfile } from "./components/EditProfile/EditProfile";
 import { EditPlan } from "./components/EditPlan/EditPlan";
 import { MyAgenda } from "./components/MyAgenda/MyAgenda";
@@ -23,6 +22,8 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import SettingsIcon from "@mui/icons-material/Settings";
 import KeyIcon from "@mui/icons-material/Key";
 import { EditPassword } from "./components/EditPassword/EditPassword";
+import { CustomerProps } from "../../Global/types";
+import { api } from "../../api";
 
 enum ProfileItems {
   overview = "OVERVIEW",
@@ -37,6 +38,11 @@ export function AccountSettings() {
   const [profileItemValue, setProfileItemValue] = useState(
     ProfileItems.overview
   );
+  const [customers, setCustomers] = useState<Array<CustomerProps>>([]);
+
+  useEffect(() => {
+    api.get("/customers").then((response) => setCustomers(response.data));
+  }, []);
 
   const handleClick = (value: ProfileItems) => {
     setProfileItemValue(value);
@@ -55,7 +61,7 @@ export function AccountSettings() {
       case ProfileItems.settings:
         return <Preferences />;
       default:
-        return fakeUsers.map((user) => <Overview {...user} key={user.id} />);
+        return customers.map((customer) => <Overview {...customer} key={customer.id} />);
     }
   }
 

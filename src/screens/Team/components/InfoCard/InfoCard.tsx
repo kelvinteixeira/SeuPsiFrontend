@@ -9,31 +9,31 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-import { CardInfoProps } from "./InfoCardType";
+import SendIcon from "@mui/icons-material/Send";
+import { ProfessionalProps } from "../../../../Global/types";
 
-export function InfoCard(props: CardInfoProps) {
+export function InfoCard(props: ProfessionalProps) {
   return (
-    <Card variant="elevation" sx={{ width: 580, height: 570, margin: 2 }}>
+    <Card variant="elevation" sx={{ width: 580, margin: 2 }}>
       <Box bgcolor={"var(--main-color)"} sx={{ height: 15 }}></Box>
       <Grid container alignContent={"center"} justifyContent={"center"}>
         <Avatar
-          alt={props.nome}
-          src={props.imagem}
+          alt={props.name}
+          src={props.profilePicture}
           sx={{ width: 220, height: 220, margin: 2 }}
         />
 
         <Grid sx={{ width: 300 }}>
           <Typography variant="body1" marginTop={3} fontSize={25}>
-            {props.nome}
+            {props.name}
           </Typography>
           {props.CRP ? (
             <Grid container>
               <Typography variant="body2" fontWeight={"bold"}>
-                {props.profissao}
+                {props.profession}
               </Typography>
               &nbsp; | &nbsp;
               <Typography variant="body2">CRP: &nbsp; </Typography>
@@ -48,31 +48,31 @@ export function InfoCard(props: CardInfoProps) {
           ) : (
             <Grid container>
               <Typography variant="body2" fontWeight={"bold"}>
-                {props.profissao}
+                {props.profession}
               </Typography>
             </Grid>
           )}
           <Typography variant="body2">
-            {props.cidade}, {props.estado}
+            {props.city}, {props.state}
           </Typography>
           <Grid container alignItems={"center"}>
-            <Rating name="read-only" value={props.notaAvaliacao} readOnly />
+            <Rating name="read-only" value={props.avaliation} readOnly />
             <Typography variant="body2" fontWeight={600}>
               <a href="">(Avaliações)</a>
             </Typography>
           </Grid>
           <Typography variant="body1">Principais especialidades</Typography>
-          {props.especialidades.map((items) => (
-            <Box marginLeft={4} key={items}>
+          {props.skills.map((skill) => (
+            <Box marginLeft={4} key={skill}>
               <ul>
                 <li>
-                  <Typography variant="subtitle2">{items}</Typography>
+                  <Typography variant="subtitle2">{skill}</Typography>
                 </li>
               </ul>
             </Box>
           ))}
           <Typography variant="overline" fontSize={18}>
-            Valor: R$ {props.valor.toFixed(2)}/hr
+            Valor: R$ {props.price.toFixed(2)}/hr
           </Typography>
         </Grid>
 
@@ -92,7 +92,7 @@ export function InfoCard(props: CardInfoProps) {
               Um Pouco sobre mim:
             </Typography>
             <Typography variant="subtitle2">
-              {props.resumo.substring(0, 220)}
+              {props.description.substring(0, 220)}
             </Typography>
           </Grid>
 
@@ -106,7 +106,7 @@ export function InfoCard(props: CardInfoProps) {
                 sx={{
                   color: "var(--main-color)",
                 }}
-                onClick={() => window.open(props.redesSocias.instagram)}
+                onClick={() => window.open(props.socialMedias.instagram)}
               >
                 <InstagramIcon />
               </IconButton>
@@ -116,7 +116,7 @@ export function InfoCard(props: CardInfoProps) {
                 sx={{
                   color: "var(--main-color)",
                 }}
-                onClick={() => window.open(props.redesSocias.linkedIn)}
+                onClick={() => window.open(props.socialMedias.linkedIn)}
               >
                 <LinkedInIcon />
               </IconButton>
@@ -126,7 +126,7 @@ export function InfoCard(props: CardInfoProps) {
                 sx={{
                   color: "var(--main-color)",
                 }}
-                onClick={() => window.open(props.redesSocias.email)}
+                onClick={() => window.open(props.socialMedias.email)}
               >
                 <AttachEmailIcon />
               </IconButton>
@@ -142,11 +142,12 @@ export function InfoCard(props: CardInfoProps) {
                 marginBottom: 2,
                 borderRadius: 16,
                 textTransform: "none",
+                backgroundColor: "var(--main-color)",
               }}
               variant="contained"
-              startIcon={<ChatBubbleOutlineIcon />}
+              endIcon={<SendIcon />}
             >
-              Manda mensagem!
+              Manda mensagem
             </Button>
           </Tooltip>
         </Grid>

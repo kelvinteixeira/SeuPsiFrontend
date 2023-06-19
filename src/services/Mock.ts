@@ -1,102 +1,3 @@
-export const fakeCards = [
-  {
-    id: 1,
-    nome: "Dr. Monkey D. Luffy",
-    imagem:
-      "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/05/luffy-one-piece.webp?fit=1200%2C675&ssl=1",
-    profissao: "Psicólogo",
-    CRP: "12345678",
-    cidade: "Campina Grande",
-    estado: "Paraíba",
-    notaAvaliacao: 5,
-    idiomas: ["Português", "Inglês"],
-    especialidades: [
-      "Hipnoterapeuta",
-      "Psicologia infantil",
-      "Terapia do sono",
-    ],
-    valor: 120,
-    resumo:
-      "Meu nome é Luffy sou apaixonado por contar histórias engraçadas. Adoro escrever sobre temas como viagens e comédia. Gosto de jogar futebol para manter a mente e o corpo saudáveis. E quero ser o rei dos piratas.",
-    redesSocias: {
-      instagram: "",
-      linkedIn: "",
-      email: "",
-    },
-  },
-  {
-    id: 2,
-    nome: "Dr. Edward  Newgate",
-    imagem:
-      "https://epipoca.com.br/wp-content/uploads/2023/02/barba-branca-oden-one-piece.jpg",
-    profissao: "Psicanalista",
-    CRP: "",
-    cidade: "São Paulo",
-    estado: "São Paulo",
-    notaAvaliacao: 4,
-    idiomas: ["Inglês", "Japonês"],
-    especialidades: [
-      "Psicologia Geriátrica",
-      "Terapia do casal",
-      "Aroma terapeuta",
-    ],
-    valor: 140,
-    resumo:
-      "Me chamo Edward e ja fui professor de educação física, ainda adoro incentivar as pessoas a adotarem um estilo de vida saudável. Além do esporte, sou um grande admirador de arte e cultura.",
-    redesSocias: {
-      instagram: "",
-      linkedIn: "",
-      email: "",
-    },
-  },
-  {
-    id: 3,
-    nome: "Dr. Borsalino Kizaru",
-    imagem:
-      "https://img1.ak.crunchyroll.com/i/spire4/dc74d400904ae57d6c2f12ad042350441555949693_full.png",
-    profissao: "Terapeuta",
-    CRP: "",
-    cidade: "Manaus",
-    estado: "Amazonas",
-    notaAvaliacao: 3,
-    idiomas: ["Alemão", "Inglês"],
-    especialidades: ["Psicologia Infantil", "Terapia sexual", "Hipnoterapeuta"],
-    valor: 115,
-    resumo:
-      "Também fotógrafo, adoro registrar momentos únicos e belas paisagens. Além da fotografia, sou um grande amante da natureza e pratico trilhas e acampamentos sempre que possível. Adoro ler livros de filosofia.",
-    redesSocias: {
-      instagram: "",
-      linkedIn: "",
-      email: "",
-    },
-  },
-  {
-    id: 4,
-    nome: "Dra. Nico Robin",
-    imagem:
-      "https://ovicio.com.br/wp-content/uploads/2022/01/20220116-ovicio-one-piece-nico-robin-cosplay-1.jpg",
-    profissao: "Coach",
-    CRP: "",
-    cidade: "Rio de janeiro",
-    estado: "Rio de janeiro",
-    notaAvaliacao: 5,
-    idiomas: ["Francês", "Japonês", "Português"],
-    especialidades: [
-      "Psicologia Geriátrica",
-      "Terapia do casal",
-      "Aroma terapeuta",
-    ],
-    valor: 165,
-    resumo:
-      "Sou uma jovem musicista que adora rock e toca guitarra em uma banda local. Sou bastante extrovertida, engraçada e adoro fazer novas amizades. Além disso, sou apaixonado por literatura e estou sempre lendo algo novo. ",
-    redesSocias: {
-      instagram: "https://www.instagram.com/kelvinteixeira_/",
-      linkedIn: "",
-      email: "",
-    },
-  },
-];
-
 export const fakeProfissoes = [
   "Psicólogo",
   "Psicanalista",
@@ -145,3 +46,42 @@ export const fakeGeneros = [
   "Outros",
   "Prefiro não optar"
 ];
+
+export const fakePlans = [
+  {
+    title: "Plano Premium",
+    benefits: [
+      "muitas coisas boas pra caramba e vai valer a pena viu1!",
+      "muitas coisas boas pra caramba e vai valer a pena viu2!",
+      "muitas coisas boas pra caramba e vai valer a pena viu3!",
+    ],
+    buttonTitle: "Quero ser premium",
+    headerTapeColor: "var(--main-color)",
+    valor: "99,99",
+  },
+  {
+    title: "Plano Platinum",
+    benefits: [
+      "muitas coisas excelentes pra dedeu mano1!",
+      "muitas coisas excelentes pra dedeu mano2!",
+      "muitas coisas excelentes pra dedeu mano3!",
+      "muitas coisas excelentes pra dedeu mano4!",
+    ],
+    buttonTitle: "Quero ser platinum",
+    headerTapeColor: "#E0FFFF",
+    valor: "170,00",
+  },
+  {
+    title: "Plano empresarial",
+    benefits: [
+      "muitas coisas boas so que pra PJ1 e vai valer a pena viu!",
+      "muitas coisas boas so que pra PJ2 e vai valer a pena viu!",
+      "muitas coisas boas so que pra PJ3 e vai valer a pena viu!",
+      "muitas coisas boas so que pra PJ4 e vai valer a pena viu!",
+    ],
+    buttonTitle: "Quero o empresarial",
+    headerTapeColor: "#6A5ACD",
+    valor: "Verificar tabela",
+  },
+];
+
