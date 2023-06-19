@@ -15,6 +15,7 @@ export function BackToTopButton() {
           textTransform: "none",
           position: "fixed",
           zIndex: 1,
+          backgroundColor: "var(--main-color)"
         }}
       >
         <ArrowCircleUpIcon sx={{ width: 30, height: 30 }} />

@@ -23,7 +23,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import KeyIcon from "@mui/icons-material/Key";
 import { EditPassword } from "./components/EditPassword/EditPassword";
 import { CustomerProps } from "../../Global/types";
-import { api } from "../../api";
+import { api } from "../../services/api";
 
 enum ProfileItems {
   overview = "OVERVIEW",

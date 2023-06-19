@@ -9,9 +9,24 @@
 
 :root {
   --bg-color: #f3f0f0;
+
+  /* AZUL */
+
   --main-color: #1976D2;
   --main-color-20: #1976D220;
   --main-color-40: #1976D240;
+
+  /* VERDE */
+
+  /* --main-color: #19d251;
+  --main-color-20: #19d25120;
+  --main-color-40: #19d25140; */
+
+  /* LARANJA */
+
+  /* --main-color: #d67a11;
+  --main-color-20: #d67a1120;
+  --main-color-40: #d67a1140; */
 }
 
 html {

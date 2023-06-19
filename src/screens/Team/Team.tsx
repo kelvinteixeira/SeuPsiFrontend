@@ -4,7 +4,7 @@ import { Searchbar } from "./components/Searchbar/Searchbar";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Grid } from "@mui/material";
-import { api } from "../../api";
+import { api } from "../../services/api";
 import { ProfessionalProps } from "../../Global/types";
 
 export function Team() {

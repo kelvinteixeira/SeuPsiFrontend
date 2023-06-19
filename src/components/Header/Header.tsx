@@ -179,14 +179,13 @@ export function Header() {
           >
             <BottomNavigation
               showLabels
-              sx={{ color: "var(--main-color" }}
               value={value}
               onChange={(_, newValue) => setValue(newValue)}
             >
               <BottomNavigationAction
                 onClick={() => navigate("/equipe")}
                 label="Equipe"
-                icon={<GroupIcon />}
+                icon={<GroupIcon  />}
               />
               <BottomNavigationAction
                 onClick={() => {

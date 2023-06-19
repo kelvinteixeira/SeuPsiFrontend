@@ -9,16 +9,9 @@ import {
   Typography,
 } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
+import { PlansProps } from "../../../Global/types";
 
-type CardPlansProps = {
-  title: string;
-  benefits: string[];
-  buttonTitle: string;
-  headerTapeColor: string;
-  valor: string;
-};
-
-export function CardPlans(props: CardPlansProps) {
+export function CardPlans(props: PlansProps) {
   return (
     <Card variant="elevation" sx={{ width: 350, height: 450 }}>
       <Box bgcolor={props.headerTapeColor} sx={{ height: 15 }}></Box>
@@ -55,7 +48,7 @@ export function CardPlans(props: CardPlansProps) {
         </Grid>
 
         <Typography variant="overline" fontWeight={"bold"} textAlign={"center"}>
-          Valor: {props.valor}
+          Valor: {props.price}
         </Typography>
         <Grid
           container

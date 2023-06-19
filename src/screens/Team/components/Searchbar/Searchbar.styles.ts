@@ -22,6 +22,7 @@ export const StyledButton = styled(Button)`
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   text-transform: none;
+  background-color: var(--main-color);
 `;
 
 export const StyledFilterBar = styled(Grid)`

@@ -6,19 +6,9 @@ import CakeIcon from "@mui/icons-material/Cake";
 import FlagIcon from "@mui/icons-material/Flag";
 import ArticleIcon from "@mui/icons-material/Article";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
+import { CustomerProps } from "../../../../Global/types";
 
-export type OverviewProps = {
-  realName: string;
-  socialName: string;
-  birthday: string;
-  cpf: string;
-  email: string;
-  locality: string;
-  plan: string;
-  planPrice: string;
-};
-
-export function Overview(props: OverviewProps) {
+export function Overview(props: CustomerProps) {
   return (
     <Card
       variant="outlined"
@@ -47,7 +37,7 @@ export function Overview(props: OverviewProps) {
               Nome do usuário:
             </Typography>
             <Typography variant="body2" sx={{ fontWeight: 800 }}>
-              {props.realName}
+              {props.userName}
             </Typography>
           </Grid>
           <Grid
@@ -111,7 +101,7 @@ export function Overview(props: OverviewProps) {
               Data de nascimento:
             </Typography>
             <Typography variant="body2" sx={{ fontWeight: 800 }}>
-              {props.birthday}
+              {props.birthdayDate}
             </Typography>
           </Grid>
           <Grid
@@ -131,7 +121,7 @@ export function Overview(props: OverviewProps) {
               CPF:
             </Typography>
             <Typography variant="body2" sx={{ fontWeight: 800 }}>
-              {props.cpf}
+              {props.CPF}
             </Typography>
           </Grid>
           <Grid
@@ -148,10 +138,10 @@ export function Overview(props: OverviewProps) {
                 width: 300,
               }}
             >
-              País ou região:
+              Localidade:
             </Typography>
             <Typography variant="body2" sx={{ fontWeight: 800 }}>
-              {props.locality}
+              {props.city} - {props.state}, {props.country}
             </Typography>
           </Grid>
           <Grid

@@ -1,10 +1,16 @@
+import { useEffect, useState } from "react";
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { CardPlans } from "./components/CardPlans";
-import { fakePlans } from "./mockPlans";
 import { Grid, Typography } from "@mui/material";
+import { PlansProps } from "../../Global/types";
+import { api } from "../../services/api";
 
 export function Plans() {
+  const [plans, setPlans] = useState<Array<PlansProps>>([]);
+  useEffect(() => {
+    api.get('/plans').then(response => setPlans(response.data))
+  }, []);
   return (
     <>
       <Header />
@@ -24,8 +30,8 @@ export function Plans() {
           marginBottom={3}
           direction={"row"}
         >
-          {fakePlans.map((plans) => (
-            <CardPlans {...plans} key={plans.title} />
+          {plans.map((plan) => (
+            <CardPlans {...plan} key={plan.id} />
           ))}
         </Grid>
       </Grid>

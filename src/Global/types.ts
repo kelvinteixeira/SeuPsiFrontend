@@ -39,3 +39,12 @@ export type CustomerProps = {
     }
   ];
 };
+
+export type PlansProps = {
+  id: number;
+  title: string;
+  benefits: string[];
+  buttonTitle: string;
+  headerTapeColor: string;
+  price: string;
+};
