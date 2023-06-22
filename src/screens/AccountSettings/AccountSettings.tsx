@@ -15,11 +15,13 @@ import { EditProfile } from "./components/EditProfile/EditProfile";
 import { EditPlan } from "./components/EditPlan/EditPlan";
 import { MyAgenda } from "./components/MyAgenda/MyAgenda";
 import { Preferences } from "./components/Preferences/Preferences";
+import { Payment } from "./components/Payment/Payment";
 import HomeIcon from "@mui/icons-material/Home";
 import EditIcon from "@mui/icons-material/Edit";
 import ArticleIcon from "@mui/icons-material/Article";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import SettingsIcon from "@mui/icons-material/Settings";
+import CreditCardIcon from '@mui/icons-material/CreditCard';
 import KeyIcon from "@mui/icons-material/Key";
 import { EditPassword } from "./components/EditPassword/EditPassword";
 import { CustomerProps } from "../../Global/types";
@@ -32,6 +34,7 @@ enum ProfileItems {
   editPassword = "EDITPASSWORD",
   myAgenda = "MYAGENDA",
   preferences = "PREFERENCES",
+  payment = "PAYMENT",
 }
 
 export function AccountSettings() {
@@ -60,6 +63,8 @@ export function AccountSettings() {
         return <MyAgenda />;
       case ProfileItems.preferences:
         return <Preferences />;
+      case ProfileItems.payment:
+        return <Payment />;
       default:
         return customers.map((customer) => (
           <Overview {...customer} key={customer.id} />
@@ -78,7 +83,7 @@ export function AccountSettings() {
             sx={{
               width: 300,
               background: "var(--main-color-40)",
-              minHeight: 550,
+              minHeight: 600,
             }}
           >
             <Grid
@@ -153,9 +158,23 @@ export function AccountSettings() {
               </MenuItem>
               <Divider />
               <MenuItem
+                onClick={() => handleClick(ProfileItems.payment)}
+                className={
+                  profileItemValue == ProfileItems.payment ? "link-active" : ""
+                }
+              >
+                <CreditCardIcon
+                  sx={{ color: "var(--main-color)", marginRight: 1 }}
+                />
+                <Typography variant="overline">Dados de pagamento</Typography>
+              </MenuItem>
+              <Divider />
+              <MenuItem
                 onClick={() => handleClick(ProfileItems.preferences)}
                 className={
-                  profileItemValue == ProfileItems.preferences ? "link-active" : ""
+                  profileItemValue == ProfileItems.preferences
+                    ? "link-active"
+                    : ""
                 }
               >
                 <SettingsIcon
