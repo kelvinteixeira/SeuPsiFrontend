@@ -90,10 +90,14 @@ export function EditPassword() {
             />
           </FormControl>
 
-          <FormControl variant="outlined">
+          <FormControl
+            variant="outlined"
+            
+          >
             <InputLabel
               sx={{
                 margin: -1,
+                
               }}
               htmlFor="password"
             >
@@ -110,6 +114,7 @@ export function EditPassword() {
                 backgroundColor: "var(--main-color-20)",
                 borderRadius: 2,
                 width: 620,
+                
               }}
             />
           </FormControl>
@@ -128,16 +133,16 @@ export function EditPassword() {
               edge="end"
             >
               {showPassword ? (
-                <VisibilityOff color="primary" />
+                <VisibilityOff sx={{ color: "var(--main-color)" }} />
               ) : (
-                <Visibility color="primary" />
+                <Visibility sx={{ color: "var(--main-color)" }} />
               )}
             </IconButton>
           </Grid>
           <Button
             onClick={() => setOpenModal(true)}
             variant="contained"
-            sx={{ textTransform: "none" }}
+            sx={{ textTransform: "none", backgroundColor: "var(--main-color)" }}
           >
             Salvar alterações
           </Button>

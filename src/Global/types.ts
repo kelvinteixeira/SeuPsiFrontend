@@ -31,13 +31,15 @@ export type CustomerProps = {
   state: string;
   country: string;
   plan: string;
-  schedules: [
-    {
-      id: number;
-      date: Date;
-      professional: string;
-    }
-  ];
+  schedules: SchedulesProps[];
+};
+
+type SchedulesProps = {
+  id: number;
+  date: string;
+  professional: string;
+  type: string;
+  situation: string;
 };
 
 export type PlansProps = {

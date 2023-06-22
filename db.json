@@ -124,18 +124,52 @@
       "schedules": [
         {
           "id": 1,
-          "date": "2023-06-19T18:53:10.000Z",
-          "professional": "Dr. Monkey D. Luffy"
+          "date": "2023-05-05T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Remoto",
+          "situation": "Concluida"
         },
         {
           "id": 2,
-          "date": "2023-05-29T18:53:10.000Z",
-          "professional": "Dr. Monkey D. Luffy"
+          "date": "2023-06-09T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Remoto",
+          "situation": "Concluida"
         },
         {
           "id": 3,
-          "date": "2023-01-05T18:53:10.000Z",
-          "professional": "Dr. Monkey D. Luffy"
+          "date": "2023-06-13T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Presencial",
+          "situation": "Concluida"
+        },
+        {
+          "id": 4,
+          "date": "2023-06-15T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Remoto",
+          "situation": "Cancelada"
+        },
+        {
+          "id": 5,
+          "date": "2023-06-19T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Presencial",
+          "situation": "Concluida"
+        },
+        {
+          "id": 6,
+          "date": "2023-06-23T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Presencial",
+          "situation": "Pendente"
+        },
+        {
+          "id": 7,
+          "date": "2023-07-23T23:10:06.000Z",
+          "professional": "Dr. Monkey D. Luffy",
+          "type": "Remoto",
+          "situation": "Pendente"
         }
       ]
     }
