@@ -19,10 +19,11 @@ import { api } from "../../../../services/api";
 import { CustomerProps } from "../../../../Global/types";
 import { Modal } from "../../../../components/Modal/Modal";
 import { months, columns } from "./MyAgendaProps";
+import { SnackbarMessage } from "../../../../components/Snackbar/Snackbar";
 
 export function MyAgenda() {
-  const [openCancelModal, setOpenCancelModal] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
   const currentDate = new Date();
   const currentMonthIndex = currentDate.getMonth();
   const [monthIndex, setMonthIndex] = useState(currentMonthIndex);
@@ -87,6 +88,7 @@ export function MyAgenda() {
             container
             justifyContent={"space-around"}
             marginTop={2}
+            key={customer.id}
           >
             <TableContainer sx={{ maxWidth: 650, maxHeight: 300 }}>
               <Table stickyHeader>
@@ -97,7 +99,7 @@ export function MyAgenda() {
                     ))}
                   </TableRow>
                 </TableHead>
-                <TableBody key={customer.id}>
+                <TableBody>
                   {customer.schedules.map((schedule) => {
                     const scheduleMonth = new Date(schedule.date).getMonth();
                     return monthIndex === scheduleMonth ? (
@@ -109,9 +111,9 @@ export function MyAgenda() {
                               sx={{ cursor: "pointer" }}
                               onClick={() => {
                                 if (schedule.situation === "Pendente") {
-                                  setOpenCancelModal(true);
-                                } else {
                                   setOpenModal(true);
+                                } else {
+                                  setOpenSnackbar(true)
                                 }
                               }}
                               variant="footer"
@@ -137,18 +139,17 @@ export function MyAgenda() {
         ))}
       </Box>
       <Modal
-        open={openCancelModal}
-        onClose={() => setOpenCancelModal(false)}
-        title={"Atenção"}
-        subtitle={"Você realmente deseja cancelar essa consulta"}
-        confirmClick={() => setOpenCancelModal(false)}
-      />
-      <Modal
         open={openModal}
         onClose={() => setOpenModal(false)}
-        title={"Aviso"}
-        subtitle={"Consulta ja finalizada!"}
+        title={"Atenção"}
+        subtitle={"Você realmente deseja cancelar essa consulta"}
         confirmClick={() => setOpenModal(false)}
+      />
+       <SnackbarMessage
+        open={openSnackbar}
+        message={"Esse atendimento já foi finalizado!"}
+        onClose={() => setOpenSnackbar(false)}
+        severity={"info"}
       />
     </Card>
   );

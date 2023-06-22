@@ -23,11 +23,11 @@ type Column = {
 }
 
 export const columns: readonly Column[] = [
-  { id: "type", label: "Tipo do atendimento" },
+  { id: "type", label: "Atendimento" },
   { id: "professional", label: "Profissional" },
   {
     id: "date",
-    label: "Data da consulta",
+    label: "Data",
     format: (value: string) => formatDate(new Date(value)),
   },
   { id: "situation", label: "Situação" },

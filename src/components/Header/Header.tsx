@@ -185,7 +185,7 @@ export function Header() {
               <BottomNavigationAction
                 onClick={() => navigate("/equipe")}
                 label="Equipe"
-                icon={<GroupIcon  />}
+                icon={<GroupIcon />}
               />
               <BottomNavigationAction
                 onClick={() => {
@@ -209,49 +209,14 @@ export function Header() {
             </BottomNavigation>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Abrir configurações">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Tooltip title="Infomações da conta">
+              <IconButton onClick={() => navigate("/conta")} sx={{ p: 0 }}>
                 <Avatar
                   alt="login picture"
                   src="https://i0.wp.com/viciados.net/wp-content/uploads/2022/11/Naruto-Shippuden-Boruto-2023.webp?resize=1000%2C600&ssl=1"
                 />
               </IconButton>
             </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              <MenuItem onClick={() => navigate("/conta")}>
-                <Grid container>
-                  <AccountCircleIcon sx={{ color: "var(--main-color)" }} />
-                  <Typography marginLeft={1}>Perfil</Typography>
-                </Grid>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Grid container>
-                  <SettingsIcon sx={{ color: "var(--main-color)" }} />
-                  <Typography marginLeft={1}>Preferências</Typography>
-                </Grid>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Grid container>
-                  <LogoutIcon sx={{ color: "var(--main-color)" }} />
-                  <Typography marginLeft={1}>Sair</Typography>
-                </Grid>
-              </MenuItem>
-            </Menu>
           </Box>
         </Toolbar>
       </Container>
