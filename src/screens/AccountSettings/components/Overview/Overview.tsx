@@ -1,4 +1,4 @@
-import { Card, Typography, Grid, Box } from "@mui/material";
+import { Card, Typography, Grid, Box, Paper } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import BadgeIcon from "@mui/icons-material/Badge";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
@@ -10,7 +10,7 @@ import { CustomerProps } from "../../../../Global/types";
 
 export function Overview(props: CustomerProps) {
   return (
-    <Card
+    <Card component={Paper}
       variant="outlined"
       sx={{ width: 700, borderBottomLeftRadius: 0, borderTopLeftRadius: 0 }}
     >

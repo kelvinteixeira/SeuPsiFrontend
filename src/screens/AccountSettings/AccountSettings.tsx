@@ -31,7 +31,7 @@ enum ProfileItems {
   editPLan = "EDITPLAN",
   editPassword = "EDITPASSWORD",
   myAgenda = "MYAGENDA",
-  settings = "SETTINGS",
+  preferences = "PREFERENCES",
 }
 
 export function AccountSettings() {
@@ -58,10 +58,12 @@ export function AccountSettings() {
         return <EditPlan />;
       case ProfileItems.myAgenda:
         return <MyAgenda />;
-      case ProfileItems.settings:
+      case ProfileItems.preferences:
         return <Preferences />;
       default:
-        return customers.map((customer) => <Overview {...customer} key={customer.id} />);
+        return customers.map((customer) => (
+          <Overview {...customer} key={customer.id} />
+        ));
     }
   }
 
@@ -151,9 +153,9 @@ export function AccountSettings() {
               </MenuItem>
               <Divider />
               <MenuItem
-                onClick={() => handleClick(ProfileItems.settings)}
+                onClick={() => handleClick(ProfileItems.preferences)}
                 className={
-                  profileItemValue == ProfileItems.settings ? "link-active" : ""
+                  profileItemValue == ProfileItems.preferences ? "link-active" : ""
                 }
               >
                 <SettingsIcon

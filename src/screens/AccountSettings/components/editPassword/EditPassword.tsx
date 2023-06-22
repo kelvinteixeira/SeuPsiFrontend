@@ -8,6 +8,7 @@ import {
   OutlinedInput,
   IconButton,
   Button,
+  Paper
 } from "@mui/material";
 import { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
@@ -26,6 +27,7 @@ export function EditPassword() {
 
   return (
     <Card
+    component={Paper}
       variant="outlined"
       sx={{ width: 700, borderBottomLeftRadius: 0, borderTopLeftRadius: 0 }}
     >

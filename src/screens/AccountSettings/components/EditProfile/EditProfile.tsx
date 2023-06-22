@@ -6,6 +6,7 @@ import {
   TextField,
   Autocomplete,
   Button,
+  Paper
 } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
@@ -24,6 +25,7 @@ export function EditProfile() {
 
   return (
     <Card
+    component={Paper}
       variant="outlined"
       sx={{ width: 700, borderBottomLeftRadius: 0, borderTopLeftRadius: 0 }}
     >

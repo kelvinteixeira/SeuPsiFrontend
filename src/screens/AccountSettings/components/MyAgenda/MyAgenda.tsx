@@ -48,6 +48,7 @@ export function MyAgenda() {
 
   return (
     <Card
+    component={Paper}
       variant="outlined"
       sx={{ width: 700, borderBottomLeftRadius: 0, borderTopLeftRadius: 0 }}
     >
@@ -108,7 +109,7 @@ export function MyAgenda() {
                           const value = schedule[column.id];
                           return (
                             <TableCell
-                              sx={{ cursor: "pointer" }}
+                              sx={{ cursor: "pointer", fontWeight: 'bold' }}
                               onClick={() => {
                                 if (schedule.situation === "Pendente") {
                                   setOpenModal(true);

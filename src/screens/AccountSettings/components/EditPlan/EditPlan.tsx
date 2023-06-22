@@ -1,4 +1,4 @@
-import { Card, Grid, Box, Typography, Button } from "@mui/material";
+import { Card, Grid, Box, Typography, Button, Paper } from "@mui/material";
 import ArticleIcon from "@mui/icons-material/Article";
 import DoneIcon from "@mui/icons-material/Done";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ export function EditPlan() {
   const [openModal, setOpenModal] = useState(false);
   const [openSnackbar, setOpenSnackbar] = useState(false);
   return (
-    <Card
+    <Card component={Paper}
       variant="outlined"
       sx={{ width: 700, borderBottomLeftRadius: 0, borderTopLeftRadius: 0 }}
     >
