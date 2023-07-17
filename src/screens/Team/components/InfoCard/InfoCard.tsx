@@ -71,6 +71,16 @@ export function InfoCard(props: ProfessionalProps) {
               </ul>
             </Box>
           ))}
+          <Typography variant="body1">Idiomas</Typography>
+          {props.languages.map((language) => (
+            <Box marginLeft={4} key={language}>
+              <ul>
+                <li>
+                  <Typography variant="subtitle2">{language}</Typography>
+                </li>
+              </ul>
+            </Box>
+          ))}
           <Typography variant="overline" fontSize={18}>
             Valor: R$ {props.price.toFixed(2)}/hr
           </Typography>
