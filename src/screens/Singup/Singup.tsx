@@ -12,6 +12,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import GoogleIcon from "@mui/icons-material/Google";
 import {
   StyledFirstBox,
   StyledOutlinedInput,
@@ -211,15 +212,29 @@ export function Singup() {
                   </Grid>
                 </Grid>
 
-                <Grid container justifyContent={"center"}>
-                  <StyledButton variant="contained">Criar conta</StyledButton>
+                <Grid
+                  container
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                >
+                  <StyledButton variant="contained">Cadastrar</StyledButton>
+                  <Typography>ou</Typography>
+                  <StyledButton
+                    sx={{ color: "var(--main-color)" }}
+                    variant="outlined"
+                    startIcon={<GoogleIcon />}
+                  >
+                    Cadastrar com o google
+                  </StyledButton>
                 </Grid>
-                <Typography alignSelf={"center"}>
-                  Já faz parte do SeuPsi?
-                </Typography>
-                <Link textAlign={"center"} href="/entrar" variant="overline">
-                  Clique aqui para Entrar
-                </Link>
+                <Grid container justifyContent={"center"} alignItems={"center"}>
+                  <Typography alignSelf={"center"}>
+                    Já faz parte do SeuPsi? &nbsp;
+                  </Typography>
+                  <Link textAlign={"center"} href="/entrar" variant="overline">
+                    Clique aqui para Entrar
+                  </Link>
+                </Grid>
               </Grid>
             </Grid>
           </Card>

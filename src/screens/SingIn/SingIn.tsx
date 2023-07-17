@@ -19,6 +19,7 @@ import {
   StyledButton,
   StyledSecondBox,
 } from "./SingIn.styles";
+import GoogleIcon from "@mui/icons-material/Google";
 
 export function SingIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,7 +30,12 @@ export function SingIn() {
     event.preventDefault();
   };
   return (
-    <Grid container justifyContent={"space-between"} alignItems={"center"} sx={{height: 100}}>
+    <Grid
+      container
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      sx={{ height: 100 }}
+    >
       <StyledFirstBox container justifyContent={"center"} alignItems={"center"}>
         <Grid>
           <Card variant="elevation" sx={{ width: 450, height: 550 }}>
@@ -99,11 +105,19 @@ export function SingIn() {
                     />
                   </FormControl>
                 </Grid>
-                <Typography variant="subtitle2" marginBottom={5}>
-                  <a href="">Esqueci minha senha!</a>
+                <Typography variant="subtitle2" marginBottom={1}>
+                  <Link  textAlign={"center"} variant="overline" href="/">Esqueci minha senha!</Link>
                 </Typography>
-                <StyledButton variant="contained">Entrar</StyledButton>
-                <Typography marginBottom={2} alignSelf={"center"}>
+
+                <StyledButton sx={{ margin: 0 }} variant="contained">
+                  Entrar
+                </StyledButton>
+                <Typography alignSelf={"center"} sx={{margin:1}}>ou </Typography>
+                <StyledButton sx={{color: "var(--main-color)"}} variant="outlined"  startIcon={<GoogleIcon />}>
+                  Entrar com o google
+                </StyledButton>
+
+                <Typography marginBottom={1} alignSelf={"center"}>
                   Não faz parte do SeuPsi?
                 </Typography>
 

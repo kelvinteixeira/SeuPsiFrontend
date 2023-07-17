@@ -22,7 +22,7 @@ export type CustomerProps = {
   id: number;
   userName: string;
   socialName: string;
-  proilePicture: string;
+  profilePicture: string;
   gender: string;
   CPF: string;
   email: string;
