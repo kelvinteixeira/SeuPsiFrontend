@@ -5,3 +5,15 @@ export function formatDate(date: Date) {
 
   return `${day}/${mouth}/${year}`;
 }
+
+export function formatedDate(date: string) {
+  const regexData = /^(\d{2})(\d{2})(\d{4})$/;
+
+  if (!regexData.test(date)) {
+    return "Formato inválido";
+  }
+
+  const dataFormatada = date.replace(regexData, "$1/$2/$3");
+
+  return dataFormatada;
+}

@@ -7,10 +7,13 @@ import FlagIcon from "@mui/icons-material/Flag";
 import ArticleIcon from "@mui/icons-material/Article";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import { CustomerProps } from "../../../../Global/types";
+import { formatedDate } from "../../../../utils/date";
+import { formatedCpf } from "../../../../utils/cpf";
 
 export function Overview(props: CustomerProps) {
   return (
-    <Card component={Paper}
+    <Card
+      component={Paper}
       variant="outlined"
       sx={{ width: 700, borderBottomLeftRadius: 0, borderTopLeftRadius: 0 }}
     >
@@ -101,7 +104,7 @@ export function Overview(props: CustomerProps) {
               Data de nascimento:
             </Typography>
             <Typography variant="body2" sx={{ fontWeight: 800 }}>
-              {props.birthdayDate}
+              {formatedDate(props.birthdayDate)}
             </Typography>
           </Grid>
           <Grid
@@ -121,7 +124,7 @@ export function Overview(props: CustomerProps) {
               CPF:
             </Typography>
             <Typography variant="body2" sx={{ fontWeight: 800 }}>
-              {props.CPF}
+              {formatedCpf(props.CPF)}
             </Typography>
           </Grid>
           <Grid
