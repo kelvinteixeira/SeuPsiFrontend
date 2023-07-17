@@ -29,6 +29,13 @@
   --main-color-40: #d67a1140; */
 }
 
+.dark-mode {
+  --bg-color: #000;
+  --main-color: #f3f0f0;
+  --main-color-20: #f3f0f020;
+  --main-color-40: #f3f0f040;
+}
+
 html {
   background-color: var(--bg-color);
 }

@@ -55,7 +55,7 @@ export function Payment() {
             <TextField
               autoFocus
               id="real-name"
-              label="Número formado por 12 digitos"
+              label="Número composto por 12 digitos"
               variant="standard"
               sx={{
                 width: 300,

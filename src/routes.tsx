@@ -5,6 +5,7 @@ import { SingIn } from "./screens/SingIn/SingIn";
 import { Singup } from "./screens/Singup/Singup";
 import { Plans } from "./screens/Plans/Plans";
 import { AccountSettings } from "./screens/AccountSettings/AccountSettings";
+import { PageNotFound } from "./screens/PageNotFound/PageNotFound";
 
 export function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export function AppRoutes() {
         <Route path="/cadastrar" element={<Singup />} />
         <Route path="/planos" element={<Plans />} />
         <Route path="/conta" element={<AccountSettings />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );
