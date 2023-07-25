@@ -7,8 +7,21 @@ import {
   Switch,
   Button,
 } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { UserActionTypes } from "../../../../redux/user/actionTypes";
+import { useNavigate } from "react-router-dom";
 
 export function Preferences() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    dispatch({
+      type: UserActionTypes.LOGOUT,
+    });
+    navigate("/");
+  }
+
   return (
     <Card
       component={Paper}
@@ -63,7 +76,13 @@ export function Preferences() {
             <Switch />
           </Grid>
           <Grid container justifyContent={"end"}>
-            <Button sx={{textTransform: 'none'}} variant="contained">Sair da conta</Button>
+            <Button
+              onClick={handleLogout}
+              sx={{ textTransform: "none" }}
+              variant="contained"
+            >
+              Sair da conta
+            </Button>
           </Grid>
         </Grid>
       </Box>

@@ -20,15 +20,30 @@ import {
   StyledSecondBox,
 } from "./SingIn.styles";
 import GoogleIcon from "@mui/icons-material/Google";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../redux/user/actions";
+import { useNavigate } from "react-router-dom";
 
 export function SingIn() {
   const [showPassword, setShowPassword] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
   };
+
+  function handleLogin() {
+    dispatch(loginUser({ email: userEmail, password: userPassword }));
+    if (userEmail === "teste@email.com" && userPassword === "123456") {
+      navigate("/conta");
+    }
+  }
+
   return (
     <Grid
       container
@@ -72,6 +87,8 @@ export function SingIn() {
                       sx={{ marginBottom: 3 }}
                       size="small"
                       placeholder="Digite seu endereço de email"
+                      value={userEmail}
+                      onChange={(e) => setUserEmail(e.target.value)}
                     />
                   </FormControl>
 
@@ -89,6 +106,8 @@ export function SingIn() {
                       size="small"
                       type={showPassword ? "text" : "password"}
                       label="Senha"
+                      value={userPassword}
+                      onChange={(e) => setUserPassword(e.target.value)}
                       endAdornment={
                         <InputAdornment position="end">
                           <IconButton
@@ -106,14 +125,26 @@ export function SingIn() {
                   </FormControl>
                 </Grid>
                 <Typography variant="subtitle2" marginBottom={1}>
-                  <Link  textAlign={"center"} variant="overline" href="/">Esqueci minha senha!</Link>
+                  <Link textAlign={"center"} variant="overline" href="/">
+                    Esqueci minha senha!
+                  </Link>
                 </Typography>
 
-                <StyledButton sx={{ margin: 0 }} variant="contained">
+                <StyledButton
+                  onClick={handleLogin}
+                  sx={{ margin: 0 }}
+                  variant="contained"
+                >
                   Entrar
                 </StyledButton>
-                <Typography alignSelf={"center"} sx={{margin:1}}>ou </Typography>
-                <StyledButton sx={{color: "var(--main-color)"}} variant="outlined"  startIcon={<GoogleIcon />}>
+                <Typography alignSelf={"center"} sx={{ margin: 1 }}>
+                  ou{" "}
+                </Typography>
+                <StyledButton
+                  sx={{ color: "var(--main-color)" }}
+                  variant="outlined"
+                  startIcon={<GoogleIcon />}
+                >
                   Entrar com o google
                 </StyledButton>
 

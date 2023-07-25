@@ -14,18 +14,24 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.1",
+    "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "dayjs": "^1.11.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.11.0",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-redux": "^7.1.25",
     "@types/react-scroll": "^1.8.6",
+    "@types/redux-logger": "^3.0.9",
     "@vitejs/plugin-react": "^3.1.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
